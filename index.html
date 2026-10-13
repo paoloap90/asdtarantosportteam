@@ -184,6 +184,27 @@ section{padding:96px 0}
 .pcard.gold .top img{filter:none}
 .pcard.gold .ph::before{filter:none;opacity:.12}
 
+/* ---------- perché l'atletica ---------- */
+.why{display:grid;gap:18px}
+.why-box{border-radius:var(--r);padding:32px 28px;border:1px solid var(--line);background:#fff;position:relative;overflow:hidden}
+.why-box.dark{background:var(--blue);border-color:var(--blue);color:#fff}
+.why-box .tag{margin-bottom:14px}
+.why-box.dark .tag{background:rgba(255,255,255,.16);color:#fff}
+.why-box h3{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:clamp(1.7rem,3.4vw,2.3rem);line-height:1}
+.why-box h3 span{color:var(--red)}
+.why-box.dark h3 span{color:var(--gold)}
+.why-box > p{margin-top:12px;color:var(--ink-2)}
+.why-box.dark > p{color:#dbe8f5}
+.why-list{list-style:none;display:grid;gap:16px;margin-top:24px}
+.why-list li{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start}
+.why-list .n{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--tint);color:var(--blue);font-family:var(--disp);font-weight:700;font-size:1.1rem}
+.why-box.dark .why-list .n{background:rgba(255,255,255,.14);color:var(--gold)}
+.why-list b{display:block;font-weight:700;font-size:1.04rem}
+.why-list span{display:block;color:var(--ink-2);font-size:.96rem;margin-top:2px}
+.why-box.dark .why-list span{color:#dbe8f5}
+.why-note{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:.85rem;color:var(--ink-2)}
+.why-box.dark .why-note{border-color:rgba(255,255,255,.2);color:#cfe0f1}
+
 /* ---------- staff ---------- */
 .staff{display:grid;gap:18px;grid-template-columns:1fr}
 .coach{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
@@ -312,6 +333,7 @@ footer details p{margin-top:8px}
   .drag-hint{display:flex}
   .bento{grid-template-columns:repeat(2,1fr)}
   .staff{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:1fr 1fr}
   .two{grid-template-columns:1fr 1fr}
   footer .grid{grid-template-columns:1.3fr 1fr 1fr}
   .wa-chat .bubble{display:block}
@@ -475,6 +497,43 @@ footer details p{margin-top:8px}
       <article class="pcard" style="--c:var(--blue)"><div class="ph has-img" data-foto="gruppo-giovani"><img class="fill" src="/assets/foto/salto-alto.webp" alt="Giovane atleta nel salto in alto" loading="lazy" style="object-position:center"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Allievi · Juniores</span></div><div class="bot"><h3>Giovani</h3><div class="age">16–19 anni · agonismo</div></div></article>
       <article class="pcard" style="--c:var(--deep)"><div class="ph has-img" data-foto="gruppo-adulti"><img class="fill" src="/assets/foto/gruppo-corsa.webp" alt="Adulti che corrono in pista" loading="lazy" style="object-position:center"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Senior · Master</span></div><div class="bot"><h3>Adulti</h3><div class="age">20+ anni · gara e benessere</div></div></article>
       <article class="pcard" style="--c:var(--red)"><div class="ph has-img" data-foto="gruppo-concorsi"><img class="fill" src="/assets/foto/partenza.webp" alt="Preparazione atletica: partenza dai blocchi" loading="lazy" style="object-position:center"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Concorsi militari</span></div><div class="bot"><h3>Preparazione atletica</h3><div class="age">Per le prove fisiche dei concorsi</div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PERCHÉ L'ATLETICA ================= -->
+<section id="perche-atletica">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag"><i></i>Perché l'atletica leggera</span>
+      <h2 class="d h2">Lo sport che <em>fa crescere.</em></h2>
+      <p>Correre, saltare e lanciare sono i gesti alla base di ogni sport. Per questo l'atletica è una scelta preziosa a ogni età.</p>
+    </div>
+    <div class="why">
+      <div class="why-box rv">
+        <span class="tag"><i style="background:var(--gold)"></i>Da bambini</span>
+        <h3>Le basi per <span>tutta la vita</span></h3>
+        <p>Nell'infanzia il corpo impara il movimento più in fretta che in qualsiasi altra età. L'atletica lo insegna giocando.</p>
+        <ul class="why-list">
+          <li><span class="n">01</span><div><b>Schemi motori di base</b><span>Correre, saltare e lanciare bene: le fondamenta di qualsiasi sport sceglieranno in futuro.</span></div></li>
+          <li><span class="n">02</span><div><b>Coordinazione ed equilibrio</b><span>Agilità, ritmo e controllo del corpo, allenati nell'età in cui si apprendono meglio.</span></div></li>
+          <li><span class="n">03</span><div><b>Gruppo e regole</b><span>Si gioca insieme, si rispettano compagni e tecnici, si impara a impegnarsi e a migliorarsi.</span></div></li>
+          <li><span class="n">04</span><div><b>Fiducia in sé</b><span>Ogni piccolo progresso si vede e si misura: una spinta concreta all'autostima.</span></div></li>
+        </ul>
+        <p class="why-note">L'OMS raccomanda a bambini e ragazzi (5–17 anni) in media almeno 60 minuti al giorno di attività fisica moderata o intensa.</p>
+      </div>
+      <div class="why-box dark rv">
+        <span class="tag"><i style="background:var(--gold)"></i>Da ragazzi e adulti</span>
+        <h3>Forma, obiettivi <span>e benessere</span></h3>
+        <p>Crescendo, l'atletica diventa allenamento vero: si costruisce la condizione fisica e ci si mette alla prova.</p>
+        <ul class="why-list">
+          <li><span class="n">01</span><div><b>Forza, resistenza e velocità</b><span>Una preparazione completa che migliora la salute e l'efficienza del corpo.</span></div></li>
+          <li><span class="n">02</span><div><b>Obiettivi misurabili</b><span>Tempi e misure rendono evidenti i progressi e allenano costanza e disciplina.</span></div></li>
+          <li><span class="n">03</span><div><b>Base per altri traguardi</b><span>Dalle gare alle prove fisiche dei concorsi militari, fino a qualsiasi altro sport.</span></div></li>
+          <li><span class="n">04</span><div><b>Testa libera</b><span>Allenarsi in gruppo, all'aria aperta, aiuta a scaricare lo stress e a stare bene.</span></div></li>
+        </ul>
+        <p class="why-note">Per gli adulti l'OMS indica almeno 150–300 minuti a settimana di attività moderata, o 75–150 di attività intensa.</p>
+      </div>
     </div>
   </div>
 </section>
