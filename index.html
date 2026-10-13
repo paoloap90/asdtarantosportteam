@@ -3,21 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ASD Taranto Sport Team · La nostra pista, il tuo traguardo</title>
+<title>ASD Taranto Sport Team · Corri con Taranto. Cresci in pista.</title>
 <meta name="description" content="Atletica leggera, preparazione atletica per concorsi militari e preparazione atletica di base a Taranto, nel nuovo Stadio di atletica leggera Giuseppe Valente. Tecnici FIDAL laureati in Scienze Motorie. Iscrizioni aperte.">
 <meta name="theme-color" content="#1F70B7">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ASD Taranto Sport Team · La nostra pista, il tuo traguardo">
+<meta property="og:title" content="ASD Taranto Sport Team · Corri con Taranto. Cresci in pista.">
 <meta property="og:description" content="Allenati nel nuovo Stadio di atletica leggera di Taranto con tecnici FIDAL laureati in Scienze Motorie.">
 <meta property="og:locale" content="it_IT">
 <link rel="icon" type="image/svg+xml" href="/assets/scudo.svg">
-<link rel="preload" href="/assets/fonts/barlow-condensed-latin-900-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 /* font self-hosted (Barlow, licenza SIL OFL) */
-@font-face{font-family:"Barlow Condensed";font-style:italic;font-weight:700;font-display:swap;src:url(/assets/fonts/barlow-condensed-latin-700-italic.woff2) format("woff2")}
-@font-face{font-family:"Barlow Condensed";font-style:italic;font-weight:800;font-display:swap;src:url(/assets/fonts/barlow-condensed-latin-800-italic.woff2) format("woff2")}
-@font-face{font-family:"Barlow Condensed";font-style:italic;font-weight:900;font-display:swap;src:url(/assets/fonts/barlow-condensed-latin-900-italic.woff2) format("woff2")}
-@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/barlow-condensed-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/barlow-condensed-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/barlow-condensed-latin-700-normal.woff2) format("woff2")}
 @font-face{font-family:"Barlow";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/barlow-latin-400-normal.woff2) format("woff2")}
 @font-face{font-family:"Barlow";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/barlow-latin-500-normal.woff2) format("woff2")}
 @font-face{font-family:"Barlow";font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/barlow-latin-600-normal.woff2) format("woff2")}
@@ -39,25 +37,25 @@ a{color:inherit}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 
 /* tipografia sportiva: condensato, corsivo, inclinato */
-.d{font-family:var(--disp);font-style:italic;font-weight:900;text-transform:uppercase;line-height:.86;letter-spacing:-.005em}
-.tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:.95rem;padding:6px 14px;border-radius:999px;background:var(--tint);color:var(--blue)}
+.d{font-family:var(--disp);font-weight:700;text-transform:uppercase;line-height:.95;letter-spacing:.005em}
+.tag{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.74rem;padding:7px 14px;border-radius:999px;background:var(--tint);color:var(--blue)}
 .tag i{width:8px;height:8px;border-radius:50%;background:var(--red)}
-.h2{font-size:clamp(2.6rem,7vw,4.6rem);color:var(--blue)}
-.h2 em{font-style:inherit;color:var(--red)}
+.h2{font-size:clamp(2.2rem,5.4vw,3.6rem);color:var(--ink)}
+.h2 em{font-style:normal;color:var(--blue)}
 .sec-head{margin-bottom:44px;display:grid;gap:16px;max-width:760px;justify-items:start}
 .sec-head p{color:var(--ink-2);font-size:1.1rem;max-width:56ch}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--disp);font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:1.15rem;padding:14px 26px;border-radius:999px;border:2px solid transparent;text-decoration:none;cursor:pointer;transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:600;font-size:1rem;padding:14px 24px;border-radius:999px;border:2px solid transparent;text-decoration:none;cursor:pointer;transition:transform .2s,background .2s,color .2s,box-shadow .2s}
 .btn:hover{transform:translateY(-2px)}
-.btn .ar{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#fff;color:var(--red);font-style:normal;font-size:1rem;margin-right:-12px;transition:transform .2s}
+.btn .ar{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.22);color:#fff;font-size:.95rem;margin-right:-10px;transition:transform .2s}
 .btn:hover .ar{transform:translateX(3px)}
 .btn-red{background:var(--red);color:#fff;box-shadow:0 14px 30px -14px rgba(184,45,51,.9)}
 .btn-gold{background:var(--gold);color:var(--ink)}
-.btn-gold .ar{color:var(--ink)}
+.btn-gold .ar{background:rgba(14,43,72,.12);color:var(--ink)}
 .btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
 .btn-ghost:hover{background:#fff;color:var(--blue)}
 .btn-blue{background:var(--blue);color:#fff}
-.btn-blue .ar{color:var(--blue)}
+
 
 /* riquadri foto (vuoti in attesa delle foto dell'ASD) */
 .ph{position:relative;overflow:hidden;background:var(--tint)}
@@ -76,19 +74,20 @@ header.solid .brand{color:var(--ink)}
 .brand .on-light{display:none}
 header.solid .brand .on-dark{display:none}
 header.solid .brand .on-light{display:block}
-.brand span{font-family:var(--disp);font-style:italic;font-weight:800;text-transform:uppercase;font-size:1.15rem;line-height:.9}
+.brand span{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:1.12rem;line-height:.95;letter-spacing:.02em}
 .brand small{display:block;font-size:.72rem;letter-spacing:.14em;opacity:.8}
 nav.menu{display:none;align-items:center;gap:4px;padding:5px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25)}
 header.solid nav.menu{background:var(--tint);border-color:var(--line)}
 nav.menu a{text-decoration:none;color:#fff;font-weight:600;font-size:.92rem;padding:8px 16px;border-radius:999px}
 header.solid nav.menu a{color:var(--ink)}
 nav.menu a:hover{background:#fff;color:var(--blue)}
-header.top .btn{padding:10px 20px;font-size:1rem}
+header.top .btn{padding:10px 20px;font-size:.95rem}
 
 /* ---------- HERO ---------- */
 .hero{position:relative;background:var(--blue);color:#fff;overflow:hidden;padding:110px 0 0}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 85% 10%,rgba(255,255,255,.14),transparent 60%),radial-gradient(90% 70% at 0% 100%,rgba(18,63,105,.9),transparent 70%)}
 .lanes{position:absolute;left:-5%;right:-5%;bottom:-2px;width:110%;height:72%;pointer-events:none}
+.lanes{opacity:.85}
 .lanes path{fill:none;stroke-linecap:butt;stroke-dasharray:3200;stroke-dashoffset:3200;animation:draw 1.8s cubic-bezier(.25,.8,.25,1) forwards}
 .lanes path:nth-child(2){animation-delay:.12s}.lanes path:nth-child(3){animation-delay:.24s}.lanes path:nth-child(4){animation-delay:.36s}
 @keyframes draw{to{stroke-dashoffset:0}}
@@ -96,17 +95,17 @@ header.top .btn{padding:10px 20px;font-size:1rem}
 .hero .tag{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.3)}
 .hero .tag i{background:var(--gold);animation:blink 1.6s infinite}
 @keyframes blink{50%{opacity:.3}}
-.hero h1{font-size:clamp(3.6rem,13.5vw,6.8rem);margin:22px 0 0;transform:skewX(-4deg);transform-origin:left}
+.hero h1{font-size:clamp(3.2rem,10vw,5.8rem);margin:22px 0 0;line-height:.98}
 .hero h1 span{display:block}
 .hero h1 .w{color:#fff}
 .hero h1 .g{color:var(--gold)}
-.hero h1 .o{color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.85)}
+
 .hero .lead{font-size:clamp(1.08rem,2vw,1.25rem);color:#e6f0fa;max-width:40ch;margin:24px 0 30px;line-height:1.5}
 .hero .lead b{color:#fff}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
 .chip{display:flex;align-items:center;gap:12px;padding:10px 16px 10px 10px;border-radius:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(6px)}
-.chip .n{display:grid;place-items:center;min-width:44px;height:44px;padding:0 6px;border-radius:12px;background:#fff;color:var(--blue);font-family:var(--disp);font-style:italic;font-weight:900;font-size:1.3rem}
+.chip .n{display:grid;place-items:center;min-width:44px;height:44px;padding:0 8px;border-radius:12px;background:#fff;color:var(--blue);font-family:var(--disp);font-weight:700;font-size:1.1rem}
 .chip:nth-child(2) .n{background:var(--gold);color:var(--ink)}
 .chip:nth-child(3) .n{background:var(--red);color:#fff}
 .chip b{display:block;font-weight:700;font-size:.95rem;line-height:1.1}
@@ -118,14 +117,14 @@ header.top .btn{padding:10px 20px;font-size:1rem}
 .hero-photo .f1{left:-14px;top:18%}.hero-photo .f1 i{background:var(--red)}
 .hero-photo .f2{right:-10px;top:48%}.hero-photo .f2 i{background:var(--blue)}
 .hero-photo .f3{left:18px;bottom:22px}.hero-photo .f3 i{background:var(--gold)}
-.hero-photo .badge{position:absolute;right:-18px;top:-18px;width:104px;height:104px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;text-align:center;font-family:var(--disp);font-style:italic;font-weight:900;text-transform:uppercase;line-height:.9;font-size:1.05rem;transform:rotate(-10deg);box-shadow:0 14px 30px -12px rgba(14,43,72,.7)}
-.hero-photo .badge b{display:block;font-size:1.7rem}
+.hero-photo .badge{position:absolute;right:-16px;top:-16px;width:96px;height:96px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;text-align:center;font-family:var(--disp);font-weight:700;text-transform:uppercase;line-height:.95;font-size:.95rem;transform:rotate(-8deg);box-shadow:0 14px 30px -12px rgba(14,43,72,.7)}
+.hero-photo .badge b{display:block;font-size:1.45rem}
 
 /* ---------- ticker ---------- */
-.ticker{background:var(--gold);color:var(--ink);overflow:hidden;white-space:nowrap;border-top:4px solid var(--red)}
-.ticker .run{display:inline-flex;gap:0;animation:tick 28s linear infinite;padding:14px 0}
-.ticker span{font-family:var(--disp);font-style:italic;font-weight:900;text-transform:uppercase;font-size:1.6rem;padding:0 22px;display:inline-flex;align-items:center;gap:44px}
-.ticker span::after{content:"";width:10px;height:10px;transform:rotate(45deg);background:var(--red)}
+.ticker{background:#fff;color:var(--blue);overflow:hidden;white-space:nowrap;border-bottom:1px solid var(--line)}
+.ticker .run{display:inline-flex;gap:0;animation:tick 34s linear infinite;padding:16px 0}
+.ticker span{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:1.15rem;padding:0 22px;display:inline-flex;align-items:center;gap:44px}
+.ticker span::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
 @keyframes tick{to{transform:translateX(-50%)}}
 
 section{padding:96px 0}
@@ -133,45 +132,38 @@ section{padding:96px 0}
 
 /* ---------- stadio ---------- */
 .stadium{display:grid;gap:40px;align-items:center}
-.stadium .h2{font-size:clamp(2.8rem,8vw,5.2rem)}
+
 .stadium p{color:var(--ink-2);font-size:1.1rem;margin-top:14px;max-width:52ch}
 .feats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
 .feat{border:1.5px solid var(--line);border-radius:18px;padding:16px}
-.feat b{display:block;font-family:var(--disp);font-style:italic;font-weight:900;font-size:1.6rem;color:var(--blue);text-transform:uppercase;line-height:1}
+.feat b{display:block;font-family:var(--disp);font-weight:700;font-size:1.3rem;color:var(--blue);text-transform:uppercase;line-height:1.1}
 .feat span{font-size:.92rem;color:var(--ink-2)}
 .st-photos{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:1fr 1fr;gap:12px;height:520px}
 .st-photos .ph{border-radius:var(--r)}
 .st-photos .ph:first-child{grid-row:span 2}
 .st-photos .ph:nth-child(3){background:var(--blue)}
 .st-photos .ph:nth-child(3)::before{filter:brightness(0) invert(1);opacity:.2}
-.st-photos .label{position:absolute;left:14px;bottom:14px;z-index:1;font-family:var(--disp);font-style:italic;font-weight:800;text-transform:uppercase;font-size:1rem;color:#fff;background:var(--red);padding:4px 12px;border-radius:999px}
+.st-photos .label{position:absolute;left:14px;bottom:14px;z-index:1;font-weight:600;font-size:.85rem;color:#fff;background:var(--red);padding:4px 12px;border-radius:999px}
 
 /* ---------- corsi ---------- */
 .courses{display:grid;gap:18px}
-.course{position:relative;border-radius:var(--r);overflow:hidden;background:var(--c);color:#fff;min-height:440px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate}
-.course .ph{position:absolute;inset:0;z-index:-2;background:rgba(255,255,255,.08)}
-.course .ph::before{filter:brightness(0) invert(1);opacity:.14;background-position:center 30%}
-.course::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,var(--c) 38%,transparent 80%)}
-.course .num{position:absolute;top:10px;right:18px;font-family:var(--disp);font-style:italic;font-weight:900;font-size:7rem;line-height:1;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.5)}
-.course .body{padding:26px 24px 26px}
-.course .tag{background:rgba(255,255,255,.18);color:#fff;margin-bottom:12px}
-.course h3{font-family:var(--disp);font-style:italic;font-weight:900;text-transform:uppercase;font-size:2.3rem;line-height:.9}
-.course p{margin-top:10px;color:rgba(255,255,255,.9)}
-.course ul{list-style:none;margin:14px 0 18px;display:grid;gap:6px;font-size:.96rem}
+.course{position:relative;border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+.course .ph{aspect-ratio:16/10}
+.course .num{position:absolute;top:14px;left:14px;z-index:1;font-family:var(--disp);font-weight:700;font-size:.95rem;color:#fff;background:var(--c);padding:4px 12px;border-radius:999px}
+.course .body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1;border-top:4px solid var(--c)}
+.course .tag{align-self:flex-start;margin-bottom:12px}
+.course h3{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:1.65rem;line-height:1;color:var(--ink)}
+.course p{margin-top:10px;color:var(--ink-2)}
+.course ul{list-style:none;margin:14px 0 20px;display:grid;gap:6px;font-size:.96rem}
 .course li{padding-left:20px;position:relative}
-.course li::before{content:"";position:absolute;left:0;top:.7em;width:10px;height:3px;background:#fff;border-radius:2px}
-.course a.more{align-self:flex-start;display:inline-flex;gap:8px;align-items:center;text-decoration:none;font-family:var(--disp);font-style:italic;font-weight:800;text-transform:uppercase;font-size:1.05rem;background:#fff;color:var(--ink);padding:9px 18px;border-radius:999px}
-.course.gold{color:var(--ink)}
-.course.gold .num{-webkit-text-stroke-color:rgba(14,43,72,.4)}
-.course.gold p{color:var(--ink)}
-.course.gold .tag{background:rgba(14,43,72,.12);color:var(--ink)}
-.course.gold li::before{background:var(--ink)}
-.course.gold .ph::before{filter:none;opacity:.12}
+.course li::before{content:"";position:absolute;left:0;top:.7em;width:10px;height:2px;background:var(--c);border-radius:2px}
+.course a.more{margin-top:auto;align-self:flex-start;text-decoration:none;font-weight:600;color:var(--blue)}
+.course a.more:hover{color:var(--red)}
 
 /* ---------- card gruppi (carosello stile figurine) ---------- */
 .cards-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
 .drag-hint{display:none;align-items:center;gap:10px;font-weight:600;color:var(--ink-2)}
-.drag-hint b{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--disp);font-style:italic;font-weight:900;text-transform:uppercase;font-size:1rem;transform:rotate(-12deg)}
+.drag-hint b{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:.9rem;transform:rotate(-10deg)}
 .cards{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 24px;margin:0 -20px;scrollbar-width:none;cursor:grab}
 .cards::-webkit-scrollbar{display:none}
 .cards.dragging{cursor:grabbing;scroll-snap-type:none}
@@ -183,16 +175,28 @@ section{padding:96px 0}
 .pcard .top img{width:26px;filter:brightness(0) invert(1)}
 .pcard .pill{background:#fff;color:var(--ink);font-weight:700;font-size:.8rem;padding:4px 11px;border-radius:999px}
 .pcard .bot{position:absolute;left:18px;right:18px;bottom:18px;z-index:1}
-.pcard h3{font-family:var(--disp);font-style:italic;font-weight:900;text-transform:uppercase;font-size:2.4rem;line-height:.88}
+.pcard h3{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:1.9rem;line-height:1}
 .pcard .age{margin-top:6px;font-weight:600;opacity:.92}
 .pcard.gold{color:var(--ink)}
 .pcard.gold .top img{filter:none}
 .pcard.gold .ph::before{filter:none;opacity:.12}
 
+/* ---------- staff ---------- */
+.staff{display:grid;gap:18px;grid-template-columns:1fr}
+.coach{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.coach .ph{aspect-ratio:4/4.4}
+.coach .role{position:absolute;left:14px;bottom:14px;z-index:1;background:#fff;color:var(--ink);font-weight:600;font-size:.8rem;padding:5px 12px;border-radius:999px;display:flex;align-items:center;gap:7px}
+.coach .role i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.coach .body{padding:20px 22px 22px;border-top:4px solid var(--c)}
+.coach h3{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:1.5rem;line-height:1}
+.coach p{color:var(--ink-2);font-size:.95rem;margin-top:8px}
+.coach .quals{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.coach .quals span{font-size:.78rem;font-weight:600;color:var(--blue);background:var(--tint);padding:4px 10px;border-radius:999px}
+
 /* ---------- punti di forza (bento) ---------- */
 .bento{display:grid;gap:14px}
 .tile{border-radius:var(--r);padding:28px 26px;background:#fff;border:1.5px solid var(--line);position:relative;overflow:hidden}
-.tile .big{font-family:var(--disp);font-style:italic;font-weight:900;text-transform:uppercase;font-size:3.4rem;line-height:.85;color:var(--blue)}
+.tile .big{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:2.2rem;line-height:1;color:var(--blue)}
 .tile h3{font-weight:700;font-size:1.15rem;margin-top:12px;line-height:1.25}
 .tile p{color:var(--ink-2);margin-top:6px;font-size:.98rem}
 .tile.blue{background:var(--blue);border-color:var(--blue);color:#fff}
@@ -212,7 +216,7 @@ section{padding:96px 0}
 .map iframe{display:block;width:100%;height:100%;min-height:360px;border:0}
 .place{background:var(--deep);color:#fff;border-radius:var(--r);padding:34px 30px;display:flex;flex-direction:column;position:relative;overflow:hidden}
 .place .tag{background:rgba(255,255,255,.12);color:var(--gold);align-self:flex-start}
-.place h3{font-size:clamp(2.2rem,5vw,3rem);margin:16px 0 12px}
+.place h3{font-size:clamp(1.8rem,4vw,2.4rem);margin:16px 0 12px}
 .place p{color:#cfe0f1}
 .place .cta-row{margin-top:22px}
 .place .contacts{margin-top:auto;padding-top:28px;display:grid;gap:10px}
@@ -221,15 +225,14 @@ section{padding:96px 0}
 
 /* ---------- modulo ---------- */
 .join{position:relative;background:var(--blue);color:#fff;overflow:hidden}
-.join::before{content:"";position:absolute;left:-10%;right:-10%;top:-60px;height:120px;background:linear-gradient(var(--gold) 0 34%,transparent 34% 50%,var(--red) 50% 84%,transparent 84%);transform:rotate(-3deg)}
-.join{padding-top:130px}
+.join::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--gold) 0 33.3%,var(--red) 33.3% 66.6%,#fff 66.6%)}
 .join-grid{position:relative;display:grid;gap:36px;align-items:start}
-.join h2{font-size:clamp(2.8rem,7vw,4.8rem);transform:skewX(-4deg);transform-origin:left}
+.join h2{font-size:clamp(2.2rem,5vw,3.4rem)}
 .join h2 span{display:block;color:var(--gold)}
 .join .lead{color:#e3edf7;font-size:1.12rem;margin-top:18px;max-width:42ch}
 .steps{list-style:none;display:grid;gap:12px;margin-top:26px;counter-reset:s}
 .steps li{counter-increment:s;display:flex;gap:14px;align-items:center;font-weight:600}
-.steps li::before{content:"0" counter(s);font-family:var(--disp);font-style:italic;font-weight:900;font-size:1.5rem;color:var(--gold);min-width:34px}
+.steps li::before{content:"0" counter(s);font-family:var(--disp);font-weight:700;font-size:1.3rem;color:var(--gold);min-width:34px}
 .join .alt{margin-top:24px;color:#dbe8f5}
 .join .alt a{color:#fff;font-weight:700}
 .form-card{background:#fff;color:var(--ink);border-radius:var(--r);padding:30px 26px;box-shadow:0 40px 80px -40px rgba(14,43,72,.9)}
@@ -254,7 +257,7 @@ form .btn{width:100%}
 .form-msg.err{display:block;background:#fbecec;color:var(--red)}
 .form-done{display:none;text-align:center;padding:30px 10px}
 .form-done .tick{width:70px;height:70px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;margin:0 auto 16px}
-.form-done h3{font-family:var(--disp);font-style:italic;font-weight:900;text-transform:uppercase;font-size:2.4rem;color:var(--blue);line-height:.9}
+.form-done h3{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:2rem;color:var(--blue);line-height:1}
 .form-done p{color:var(--ink-2);margin-top:10px}
 
 /* ---------- faq ---------- */
@@ -268,11 +271,11 @@ details.q p{margin-top:10px;color:var(--ink-2)}
 
 /* ---------- footer ---------- */
 footer{background:var(--deep);color:#c3d5e8;padding:0 0 110px;font-size:.95rem;overflow:hidden}
-.footer-claim{font-size:clamp(3rem,12vw,9rem);color:#fff;padding:70px 0 40px;transform:skewX(-4deg);transform-origin:left;border-bottom:1px solid rgba(255,255,255,.15)}
+.footer-claim{font-size:clamp(2.4rem,7vw,4.8rem);color:#fff;padding:64px 0 36px;border-bottom:1px solid rgba(255,255,255,.15)}
 .footer-claim span{color:var(--gold)}
 footer .grid{display:grid;gap:28px;padding-top:40px}
 footer img{height:60px;width:auto;margin-bottom:12px;filter:brightness(0) invert(1)}
-footer b{color:#fff;font-family:var(--disp);font-style:italic;font-weight:800;text-transform:uppercase;font-size:1.2rem;display:block;margin-bottom:6px}
+footer b{color:#fff;font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:1.1rem;letter-spacing:.03em;display:block;margin-bottom:6px}
 footer a{text-decoration:none;color:#fff;word-break:break-word}
 footer a:hover{color:var(--gold)}
 .social{display:flex;gap:10px;margin-top:14px}
@@ -305,6 +308,7 @@ footer details p{margin-top:8px}
   .pcard{flex-basis:280px}
   .drag-hint{display:flex}
   .bento{grid-template-columns:repeat(2,1fr)}
+  .staff{grid-template-columns:repeat(2,1fr)}
   .two{grid-template-columns:1fr 1fr}
   footer .grid{grid-template-columns:1.3fr 1fr 1fr}
   .wa-chat .bubble{display:block}
@@ -317,6 +321,7 @@ footer details p{margin-top:8px}
   .stadium{grid-template-columns:1fr 1fr;gap:64px}
   .feats{grid-template-columns:1fr 1fr}
   .bento{grid-template-columns:repeat(4,1fr)}
+  .staff{grid-template-columns:repeat(4,1fr)}
   .bento .wide{grid-column:span 2}
   .where{grid-template-columns:1.3fr .7fr}
   .join-grid{grid-template-columns:.9fr 1.1fr;gap:64px}
@@ -337,7 +342,7 @@ footer details p{margin-top:8px}
     <nav class="menu" aria-label="Menu principale">
       <a href="#stadio">Lo stadio</a>
       <a href="#corsi">Corsi</a>
-      <a href="#gruppi">Gruppi</a>
+      <a href="#staff">Staff</a>
       <a href="#dove">Dove siamo</a>
     </nav>
     <a class="btn btn-red" href="#contatti">Iscriviti</a>
@@ -356,22 +361,22 @@ footer details p{margin-top:8px}
   <div class="wrap hero-grid">
     <div>
       <span class="tag"><i></i>Iscrizioni aperte · Taranto</span>
-      <h1 class="d"><span class="w">La nostra</span><span class="o">pista,</span><span class="g">il tuo traguardo.</span></h1>
-      <p class="lead">Atletica leggera per <b>bambini, ragazzi e adulti</b> nel nuovo Stadio "Giuseppe Valente". Che tu voglia correre o far crescere tuo figlio, la partenza è qui.</p>
+      <h1 class="d"><span class="w">Corri con Taranto.</span><span class="g">Cresci in pista.</span></h1>
+      <p class="lead">Atletica leggera e preparazione atletica <b>per tutte le età</b>, dai bambini agli adulti, nel nuovo Stadio "Giuseppe Valente". Che tu voglia correre o far crescere tuo figlio, la partenza è qui.</p>
       <div class="cta-row">
         <a class="btn btn-red" href="#contatti" data-chi="L'atleta">Scendi in pista <span class="ar">→</span></a>
         <a class="btn btn-ghost" href="#contatti" data-chi="Un genitore o tutore">Iscrivi tuo figlio</a>
       </div>
       <div class="chips">
         <div class="chip"><span class="n">FIDAL</span><span><b>Tecnici tesserati</b><small>Laureati in Scienze Motorie</small></span></div>
-        <div class="chip"><span class="n">5+</span><span><b>Dai 5 anni</b><small>Gruppi per ogni età</small></span></div>
-        <div class="chip"><span class="n">03</span><span><b>Percorsi</b><small>Gara, concorsi, base</small></span></div>
+        <div class="chip"><span class="n">5+</span><span><b>Tutte le età</b><small>Bambini, ragazzi e adulti</small></span></div>
+        <div class="chip"><span class="n">03</span><span><b>Percorsi</b><small>Atletica e preparazione</small></span></div>
       </div>
     </div>
     <div class="hero-photo ph on-blue" data-foto="hero">
       <span class="float f1"><i></i>Atletica leggera</span>
-      <span class="float f2"><i></i>Concorsi militari</span>
-      <span class="float f3"><i></i>Preparazione di base</span>
+      <span class="float f2"><i></i>Preparazione atletica per concorsi militari</span>
+      <span class="float f3"><i></i>Preparazione atletica di base</span>
       <span class="badge"><span>Stadio<b>nuovo</b></span></span>
     </div>
   </div>
@@ -379,8 +384,8 @@ footer details p{margin-top:8px}
 
 <div class="ticker" aria-hidden="true">
   <div class="run">
-    <span>Atletica leggera</span><span>Concorsi militari</span><span>Preparazione atletica</span><span>Stadio G. Valente</span><span>La nostra pista, il tuo traguardo</span>
-    <span>Atletica leggera</span><span>Concorsi militari</span><span>Preparazione atletica</span><span>Stadio G. Valente</span><span>La nostra pista, il tuo traguardo</span>
+    <span>Atletica leggera</span><span>Preparazione atletica per concorsi militari</span><span>Preparazione atletica di base</span><span>Stadio G. Valente</span><span>Attività per tutte le età</span>
+    <span>Atletica leggera</span><span>Preparazione atletica per concorsi militari</span><span>Preparazione atletica di base</span><span>Stadio G. Valente</span><span>Attività per tutte le età</span>
   </div>
 </div>
 
@@ -413,40 +418,37 @@ footer details p{margin-top:8px}
   <div class="wrap">
     <div class="sec-head rv">
       <span class="tag"><i></i>I nostri corsi</span>
-      <h2 class="d h2">Scegli la tua <em>gara.</em></h2>
-      <p>Tre percorsi, un unico metodo: allenamenti programmati e seguiti da professionisti, tutti nel nuovo stadio.</p>
+      <h2 class="d h2">Scegli il tuo <em>obiettivo.</em></h2>
+      <p>Tre percorsi per tutte le età, un unico metodo: allenamenti programmati e seguiti da professionisti, nel nuovo stadio.</p>
     </div>
     <div class="courses">
       <article class="course rv" style="--c:var(--red)">
-        <div class="ph" data-foto="corso-atletica"></div>
-        <span class="num">01</span>
+        <div class="ph" data-foto="corso-atletica"><span class="num">01</span></div>
         <div class="body">
           <span class="tag">Tutte le età</span>
-          <h3>Atletica<br>leggera</h3>
-          <p>Corse, salti e lanci: dal settore giovanile all'agonismo.</p>
-          <ul><li>Gioco-sport per i più piccoli</li><li>Specialità e gare per ragazzi</li><li>Agonismo e amatori adulti</li></ul>
+          <h3>Atletica leggera</h3>
+          <p>Corse, salti e lanci: dal gioco-sport per i più piccoli all'attività agonistica.</p>
+          <ul><li>Avviamento per bambini</li><li>Specialità e gare per ragazzi</li><li>Agonismo e amatori adulti</li></ul>
           <a class="more" href="#contatti" data-corso="Atletica leggera">Richiedi info →</a>
         </div>
       </article>
       <article class="course rv" style="--c:var(--blue)">
-        <div class="ph" data-foto="corso-concorsi"></div>
-        <span class="num">02</span>
+        <div class="ph" data-foto="corso-concorsi"><span class="num">02</span></div>
         <div class="body">
-          <span class="tag">Adulti</span>
-          <h3>Concorsi<br>militari</h3>
-          <p>Preparazione mirata alle prove fisiche di Forze Armate e Polizia.</p>
-          <ul><li>Allenamento sulle prove del bando</li><li>Test e simulazioni</li><li>Programma sulla data della prova</li></ul>
-          <a class="more" href="#contatti" data-corso="Preparazione concorsi militari">Richiedi info →</a>
+          <span class="tag">Giovani e adulti</span>
+          <h3>Preparazione atletica per concorsi militari</h3>
+          <p>Allenamento mirato alle prove fisiche dei concorsi nelle Forze Armate e di Polizia.</p>
+          <ul><li>Lavoro sulle prove previste dal bando</li><li>Test di valutazione e simulazioni</li><li>Programma costruito sulla data della prova</li></ul>
+          <a class="more" href="#contatti" data-corso="Preparazione atletica per concorsi militari">Richiedi info →</a>
         </div>
       </article>
-      <article class="course gold rv" style="--c:var(--gold)">
-        <div class="ph" data-foto="corso-base"></div>
-        <span class="num">03</span>
+      <article class="course rv" style="--c:var(--gold)">
+        <div class="ph" data-foto="corso-base"><span class="num" style="color:var(--ink)">03</span></div>
         <div class="body">
-          <span class="tag">Tutti i livelli</span>
-          <h3>Preparazione<br>di base</h3>
-          <p>Forza, resistenza, velocità e mobilità, per stare bene o per altri sport.</p>
-          <ul><li>Per ogni livello di partenza</li><li>Base per qualsiasi sport</li><li>Gruppi seguiti da tecnici</li></ul>
+          <span class="tag">Tutte le età</span>
+          <h3>Preparazione atletica di base</h3>
+          <p>Forza, resistenza, velocità e mobilità: per stare bene o come base per qualsiasi sport.</p>
+          <ul><li>Per ogni livello di partenza</li><li>Ideale per chi pratica altri sport</li><li>Gruppi seguiti da tecnici qualificati</li></ul>
           <a class="more" href="#contatti" data-corso="Preparazione atletica di base">Richiedi info →</a>
         </div>
       </article>
@@ -460,7 +462,7 @@ footer details p{margin-top:8px}
     <div class="cards-head rv">
       <div class="sec-head" style="margin-bottom:0">
         <span class="tag"><i></i>Per ogni età</span>
-        <h2 class="d h2">Trova la tua <em>squadra.</em></h2>
+        <h2 class="d h2">Attività per <em>tutte le età.</em></h2>
       </div>
       <div class="drag-hint"><b>Drag</b>Scorri le card</div>
     </div>
@@ -469,24 +471,53 @@ footer details p{margin-top:8px}
       <article class="pcard" style="--c:var(--red)"><div class="ph" data-foto="gruppo-ragazzi"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Ragazzi · Cadetti</span></div><div class="bot"><h3>Ragazzi</h3><div class="age">12–15 anni · prime gare</div></div></article>
       <article class="pcard" style="--c:var(--blue)"><div class="ph" data-foto="gruppo-giovani"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Allievi · Juniores</span></div><div class="bot"><h3>Giovani</h3><div class="age">16–19 anni · agonismo</div></div></article>
       <article class="pcard" style="--c:var(--deep)"><div class="ph" data-foto="gruppo-adulti"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Senior · Master</span></div><div class="bot"><h3>Adulti</h3><div class="age">20+ anni · gara e benessere</div></div></article>
-      <article class="pcard" style="--c:var(--red)"><div class="ph" data-foto="gruppo-concorsi"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Concorsi</span></div><div class="bot"><h3>Forze Armate</h3><div class="age">Prove fisiche dei bandi</div></div></article>
+      <article class="pcard" style="--c:var(--red)"><div class="ph" data-foto="gruppo-concorsi"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Concorsi militari</span></div><div class="bot"><h3>Preparazione atletica</h3><div class="age">Per le prove fisiche dei concorsi</div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STAFF ================= -->
+<section id="staff" class="tint">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag"><i></i>Il nostro staff</span>
+      <h2 class="d h2">Chi ti <em>allena.</em></h2>
+      <p>Tecnici FIDAL laureati in Scienze Motorie e atleti di livello nazionale: competenza ed esperienza di gara al servizio di ogni età.</p>
+    </div>
+    <div class="staff">
+      <article class="coach rv" style="--c:var(--blue)">
+        <div class="ph" data-foto="istruttore-1"><span class="role"><i></i>Istruttore</span></div>
+        <div class="body"><h3>Nome Cognome</h3><p>Preparazione atletica e settore giovanile.</p><div class="quals"><span>Laurea in Scienze Motorie</span><span>Tecnico FIDAL</span></div></div>
+      </article>
+      <article class="coach rv" style="--c:var(--red)">
+        <div class="ph" data-foto="istruttore-2"><span class="role"><i></i>Istruttore</span></div>
+        <div class="body"><h3>Nome Cognome</h3><p>Preparazione atletica per concorsi militari.</p><div class="quals"><span>Laurea in Scienze Motorie</span><span>Tecnico FIDAL</span></div></div>
+      </article>
+      <article class="coach rv" style="--c:var(--gold)">
+        <div class="ph" data-foto="istruttore-3"><span class="role"><i></i>Allenatore</span></div>
+        <div class="body"><h3>Nome Cognome</h3><p>Specialità dell'atletica leggera e attività agonistica.</p><div class="quals"><span>Allenatore FIDAL 2° livello</span></div></div>
+      </article>
+      <article class="coach rv" style="--c:var(--deep)">
+        <div class="ph" data-foto="istruttore-4"><span class="role"><i></i>Atleta</span></div>
+        <div class="body"><h3>Nome Cognome</h3><p>Esperienza di gara al fianco dei nostri atleti.</p><div class="quals"><span>Atleta di livello nazionale</span></div></div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- ================= PUNTI DI FORZA ================= -->
-<section id="perche" class="tint">
+<section id="perche">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="tag"><i></i>Perché sceglierci</span>
-      <h2 class="d h2">Un passo <em>avanti.</em></h2>
+      <h2 class="d h2">Perché <em>sceglierci.</em></h2>
     </div>
     <div class="bento">
       <div class="tile blue wide rv"><div class="big">FIDAL</div><h3>Tecnici tesserati, laureati in Scienze Motorie</h3><p>Allenatori della Federazione Italiana di Atletica Leggera con formazione universitaria su allenamento e crescita.</p><span class="stripe"></span></div>
-      <div class="tile red rv"><div class="big">Top</div><h3>Atleti di livello nazionale</h3><p>Nello staff atleti professionisti con vera esperienza di gara.</p></div>
-      <div class="tile gold rv"><div class="big">New</div><h3>Stadio appena rinnovato</h3><p>Ogni allenamento nel nuovo "Giuseppe Valente".</p></div>
+      <div class="tile rv"><div class="big">Top</div><h3>Atleti di livello nazionale</h3><p>Nello staff atleti professionisti con vera esperienza di gara.</p></div>
+      <div class="tile rv"><div class="big">New</div><h3>Stadio appena rinnovato</h3><p>Ogni allenamento nel nuovo "Giuseppe Valente".</p></div>
       <div class="tile rv"><div class="big">Step</div><h3>Crescita sportiva</h3><p>Un percorso graduale con obiettivi chiari, per ogni età.</p></div>
-      <div class="tile rv"><div class="big" style="color:var(--red)">Race</div><h3>Attività agonistica</h3><p>Programmazione per specialità e partecipazione alle gare.</p></div>
+      <div class="tile rv"><div class="big">Race</div><h3>Attività agonistica</h3><p>Programmazione per specialità e partecipazione alle gare.</p></div>
       <div class="tile wide rv"><div class="big">Care</div><h3>Centro medico partner</h3><p>Collaborazione con un centro di riabilitazione e fisioterapia per prevenzione e recupero.</p></div>
     </div>
   </div>
@@ -526,7 +557,7 @@ footer details p{margin-top:8px}
   <div class="wrap join-grid">
     <div class="rv">
       <span class="tag" style="background:rgba(255,255,255,.14);color:#fff"><i style="background:var(--gold)"></i>Iscrizioni aperte</span>
-      <h2 class="d" style="margin-top:18px">Richiedi info e <span>scendi in pista.</span></h2>
+      <h2 class="d" style="margin-top:18px">Richiedi maggiori informazioni e <span>scendi in pista.</span></h2>
       <p class="lead">Compila il modulo: ti ricontattiamo con orari, quote e tutto quello che serve per iniziare.</p>
       <ol class="steps"><li>Ci lasci i tuoi dati</li><li>Ti contattiamo per conoscerci</li><li>Vieni allo stadio e inizi</li></ol>
       <p class="alt">Preferisci scriverci subito? <a href="https://wa.me/393347381249" target="_blank" rel="noopener">WhatsApp</a> o <a href="mailto:asdtarantosportteam@gmail.com">email</a>.</p>
@@ -551,7 +582,7 @@ footer details p{margin-top:8px}
             <select id="corso" name="corso" required>
               <option value="">Seleziona…</option>
               <option>Atletica leggera</option>
-              <option>Preparazione concorsi militari</option>
+              <option>Preparazione atletica per concorsi militari</option>
               <option>Preparazione atletica di base</option>
               <option>Non so ancora, consigliatemi</option>
             </select></div>
@@ -591,7 +622,7 @@ footer details p{margin-top:8px}
 
 <footer>
   <div class="wrap">
-    <div class="footer-claim d">La nostra pista,<br><span>il tuo traguardo.</span></div>
+    <div class="footer-claim d">Corri con Taranto.<br><span>Cresci in pista.</span></div>
     <div class="grid">
       <div>
         <img src="/assets/scudo.svg" alt="ASD Taranto Sport Team" width="43" height="60">
