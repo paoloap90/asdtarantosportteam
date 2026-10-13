@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="ASD Taranto Sport Team · La nostra pista, il tuo traguardo">
 <meta property="og:description" content="Allenati nel nuovo Stadio di atletica leggera di Taranto con tecnici FIDAL laureati in Scienze Motorie.">
-<meta property="og:image" content="https://asdtarantosportteam.vercel.app/assets/foto/stadio-aereo-sm.webp">
+<meta property="og:image" content="https://asdtarantosportteam.vercel.app/assets/illustrazioni/og.jpg">
 <meta property="og:locale" content="it_IT">
 <link rel="icon" type="image/svg+xml" href="/assets/scudo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,8 +66,8 @@ header.top .btn{padding:.6em 1.15em;font-size:.92rem}
 /* hero con foto dello stadio */
 .hero{position:relative;color:#fff;padding:0;overflow:hidden;background:var(--blue-deep)}
 .hero-bg{position:absolute;inset:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,63,105,.55) 0%,rgba(18,63,105,.78) 55%,rgba(18,63,105,.95) 100%)}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 50%}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,63,105,.35) 0%,rgba(18,63,105,.7) 55%,rgba(18,63,105,.92) 100%)}
 .hero-inner{position:relative;padding:72px 20px 64px;display:grid;gap:28px;align-items:center}
 .hero-logo{width:96px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.35))}
 .kicker{display:inline-flex;align-items:center;gap:10px;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:.82rem;letter-spacing:.12em;color:var(--gold)}
@@ -109,7 +109,7 @@ header.top .btn{padding:.6em 1.15em;font-size:.92rem}
 .about-text p{color:var(--ink);font-size:1.08rem;margin-top:16px}
 .about-text p:first-of-type{margin-top:22px}
 .about-photo{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:var(--tint)}
-.about-photo img{width:100%;height:100%;object-fit:cover;object-position:60% center}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center 70%}
 .about-photo::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:linear-gradient(90deg,var(--gold) 0 33.3%,var(--red) 33.3% 66.6%,var(--blue) 66.6%)}
 .quote{margin-top:26px;padding:18px 20px;border-left:4px solid var(--gold);background:var(--tint);border-radius:0 12px 12px 0;font-weight:600;color:var(--blue-deep)}
 
@@ -275,7 +275,7 @@ img.white{filter:brightness(0) invert(1)}
 <main>
 <!-- HERO: SLOGAN -->
 <section class="hero">
-  <div class="hero-bg"><img src="/assets/foto/stadio-aereo.webp" alt="Vista aerea del nuovo Stadio di atletica leggera di Taranto" fetchpriority="high"></div>
+  <div class="hero-bg"><img src="/assets/illustrazioni/stadio-aereo.svg" alt="Illustrazione: vista dall'alto del nuovo stadio di atletica leggera di Taranto" fetchpriority="high"></div>
   <div class="wrap hero-inner">
     <img class="hero-logo" src="/assets/scudo.svg" alt="Logo ASD Taranto Sport Team" width="120" height="166">
     <div>
@@ -319,9 +319,9 @@ img.white{filter:brightness(0) invert(1)}
       </div>
     </div>
     <div class="stadium-photos">
-      <figure><img src="/assets/foto/stadio-aereo-sm.webp" alt="Vista aerea dello stadio con la pista blu e il campo in erba" loading="lazy"><figcaption>Foto: Antenna Sud</figcaption></figure>
-      <figure><img src="/assets/foto/pista-curva.webp" alt="Le corsie blu della pista in curva" loading="lazy"></figure>
-      <figure><img src="/assets/foto/partenza-100m.webp" alt="Partenza di una gara di velocità sulla nuova pista" loading="lazy" style="object-position:40% center"></figure>
+      <figure><img src="/assets/illustrazioni/stadio-aereo.svg" alt="Illustrazione: lo stadio con la pista blu visto dall'alto" loading="lazy"></figure>
+      <figure><img src="/assets/illustrazioni/pista-curva.svg" alt="Illustrazione: le corsie blu della pista in curva" loading="lazy"></figure>
+      <figure><img src="/assets/illustrazioni/partenza.svg" alt="Illustrazione: linea di partenza con blocchi e numeri di corsia" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -338,7 +338,7 @@ img.white{filter:brightness(0) invert(1)}
       <div class="quote">Il nostro simbolo è il delfino di Taranto. La nostra casa è la pista.</div>
     </div>
     <div class="about-photo">
-      <img src="/assets/foto/pista-curva.webp" alt="Atleti sulla pista del nuovo stadio di Taranto" loading="lazy">
+      <img src="/assets/illustrazioni/pista-curva.svg" alt="Illustrazione: la curva della pista blu dello stadio di Taranto" loading="lazy">
     </div>
   </div>
 </section>
@@ -353,7 +353,7 @@ img.white{filter:brightness(0) invert(1)}
     </div>
     <div class="courses">
       <article class="course" style="--c:var(--red)">
-        <div class="course-img"><img src="/assets/foto/partenza-100m.webp" alt="Atlete ai blocchi di partenza" loading="lazy"><span class="tag">01</span></div>
+        <div class="course-img"><img src="/assets/illustrazioni/partenza.svg" alt="Illustrazione: blocchi di partenza" loading="lazy"><span class="tag">01</span></div>
         <div class="course-body">
           <h3>Atletica<br>leggera</h3>
           <p>Corse, salti e lanci per tutte le età: dal settore giovanile all'attività agonistica.</p>
@@ -362,7 +362,7 @@ img.white{filter:brightness(0) invert(1)}
         </div>
       </article>
       <article class="course" style="--c:var(--blue)">
-        <div class="course-img"><img src="/assets/foto/pista-curva.webp" alt="Corsie della pista" loading="lazy" style="object-position:center 75%"><span class="tag">02</span></div>
+        <div class="course-img"><img src="/assets/illustrazioni/pista-curva.svg" alt="Illustrazione: corsie della pista" loading="lazy" style="object-position:center 75%"><span class="tag">02</span></div>
         <div class="course-body">
           <h3>Preparazione<br>concorsi militari</h3>
           <p>Programmi mirati per superare le prove fisiche dei concorsi nelle Forze Armate e di Polizia.</p>
@@ -371,7 +371,7 @@ img.white{filter:brightness(0) invert(1)}
         </div>
       </article>
       <article class="course" style="--c:var(--gold);--tc:var(--ink)">
-        <div class="course-img"><img src="/assets/foto/stadio-aereo-sm.webp" alt="Vista dall'alto dello stadio" loading="lazy"><span class="tag">03</span></div>
+        <div class="course-img"><img src="/assets/illustrazioni/stadio-aereo.svg" alt="Illustrazione: lo stadio dall'alto" loading="lazy"><span class="tag">03</span></div>
         <div class="course-body">
           <h3>Preparazione<br>atletica di base</h3>
           <p>Forza, resistenza, velocità e mobilità per stare bene o migliorare in qualsiasi sport.</p>
