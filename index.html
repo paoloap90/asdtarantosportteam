@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ASD Taranto Sport Team · Scendi in pista. Diventa atleta.</title>
+<title>ASD Taranto Sport Team · Scendi in pista</title>
 <meta name="description" content="Atletica leggera, preparazione atletica per concorsi militari e preparazione atletica di base a Taranto, nel nuovo Stadio di atletica leggera Giuseppe Valente. Tecnici FIDAL laureati in Scienze Motorie. Iscrizioni aperte.">
 <meta name="theme-color" content="#1F70B7">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ASD Taranto Sport Team · Scendi in pista. Diventa atleta.">
+<meta property="og:title" content="ASD Taranto Sport Team · Scendi in pista">
 <meta property="og:description" content="Allenati nel nuovo Stadio di atletica leggera di Taranto con tecnici FIDAL laureati in Scienze Motorie.">
 <meta property="og:locale" content="it_IT">
 <link rel="icon" type="image/svg+xml" href="/assets/scudo.svg">
@@ -416,11 +416,11 @@ a.pcard{text-decoration:none;display:block}
   <div class="wrap hero-grid">
     <div>
       <span class="tag"><i></i>Iscrizioni aperte · Taranto</span>
-      <h1 class="d"><span class="w">Scendi in pista.</span><span class="g">Diventa atleta.</span></h1>
-      <p class="lead"><b>Atletica leggera per tutte le età.</b><br>Che tu voglia diventare un atleta o far crescere in forma tuo figlio, si parte da qui.</p>
+      <h1 class="d"><span class="w">Scendi</span><span class="g">in pista.</span></h1>
+      <p class="lead"><b>Dai primi passi alle grandi sfide.</b> Atletica leggera per bambini, ragazzi e adulti: principianti, amatori e agonisti. Allenati, cresci e supera i tuoi limiti con TST.</p>
       <div class="cta-row">
-        <a class="btn btn-red" href="#corsi">Scegli il tuo percorso <span class="ar">→</span></a>
-        <a class="btn btn-ghost" href="#corsi" data-filter="bambini">Iscrivi tuo figlio</a>
+        <a class="btn btn-red" href="#contatti">Prenota la tua prova gratuita <span class="ar">→</span></a>
+        <a class="btn btn-ghost" href="#corsi">Scopri i corsi</a>
       </div>
       <div class="chips">
         <div class="chip"><span class="n">FIDAL</span><span><b>Tecnici tesserati</b><small>Laureati in Scienze Motorie</small></span></div>
@@ -472,7 +472,7 @@ a.pcard{text-decoration:none;display:block}
     <div class="sec-head rv">
       <span class="tag"><i></i>Perché l'atletica leggera</span>
       <h2 class="d h2">Lo sport che <em>fa crescere.</em></h2>
-      <p>Correre, saltare e lanciare sono i gesti alla base di ogni sport. Per questo l'atletica è una scelta preziosa a ogni età.</p>
+      <p>L'atletica leggera è forza, velocità, equilibrio, coraggio. È il talento che si scopre, il carattere che cresce, l'emozione di dare il massimo.</p>
     </div>
     <div class="switch rv" role="tablist" aria-label="Scegli la fascia d'età">
       <button role="tab" aria-selected="true" aria-controls="why-kids" id="tab-kids" data-tab="why-kids">Da bambini</button>
@@ -713,7 +713,7 @@ a.pcard{text-decoration:none;display:block}
         <div class="field"><label for="msg">Messaggio</label><textarea id="msg" name="messaggio" rows="3" placeholder="Esperienze precedenti, giorni preferiti, domande…"></textarea></div>
         <label class="check"><input type="checkbox" name="privacy" value="accettata" required><span>Ho letto l'<a href="#privacy" onclick="document.getElementById('privacy').open=true">informativa privacy</a> e acconsento al trattamento dei dati per essere ricontattato. Se l'atleta è minorenne, il modulo va compilato da un genitore o tutore. <i style="color:var(--red);font-style:normal">*</i></span></label>
         <div class="form-msg" id="form-msg" role="status"></div>
-        <button class="btn btn-red" type="submit" id="submit">Richiedi informazioni <span class="ar">→</span></button>
+        <button class="btn btn-red" type="submit" id="submit">Prenota la prova gratuita <span class="ar">→</span></button>
       </form>
       <div class="form-done" id="form-done">
         <div class="tick"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
@@ -744,7 +744,7 @@ a.pcard{text-decoration:none;display:block}
 
 <footer>
   <div class="wrap">
-    <div class="footer-claim d">Scendi in pista.<br><span>Diventa atleta.</span></div>
+    <div class="footer-claim d">Scendi<br><span>in pista.</span></div>
     <div class="grid">
       <div>
         <img src="/assets/scudo.svg" alt="ASD Taranto Sport Team" width="43" height="60">
@@ -892,7 +892,7 @@ document.getElementById('lead').addEventListener('submit', function(e){
   var done = function(){ f.style.display = 'none'; document.getElementById('form-done').style.display = 'grid'; };
 
   if(!WEB3FORMS_KEY){
-    var t = 'Ciao ASD Taranto Sport Team! Vorrei maggiori informazioni.\n\n'
+    var t = 'Ciao ASD Taranto Sport Team! Vorrei prenotare una prova gratuita.\n\n'
       + 'Nome: ' + d.get('nome') + ' ' + d.get('cognome') + '\n'
       + 'Email: ' + d.get('email') + '\n'
       + 'Telefono: ' + d.get('telefono') + '\n'
@@ -907,7 +907,7 @@ document.getElementById('lead').addEventListener('submit', function(e){
   btn.disabled = true; btn.textContent = 'Invio in corso…';
   var payload = {
     access_key: WEB3FORMS_KEY,
-    subject: 'Nuova richiesta dal sito: ' + d.get('corso'),
+    subject: 'Prova gratuita dal sito: ' + d.get('corso'),
     from_name: 'Sito ASD Taranto Sport Team',
     replyto: d.get('email'),
     Nome: d.get('nome') + ' ' + d.get('cognome'),
@@ -929,7 +929,7 @@ document.getElementById('lead').addEventListener('submit', function(e){
   }).catch(function(){
     msg.className = 'form-msg err';
     msg.innerHTML = 'Invio non riuscito. Riprova oppure scrivici su <a href="https://wa.me/393347381249" target="_blank" rel="noopener">WhatsApp</a> o a <a href="mailto:asdtarantosportteam@gmail.com">asdtarantosportteam@gmail.com</a>.';
-    btn.disabled = false; btn.textContent = 'Richiedi informazioni';
+    btn.disabled = false; btn.textContent = 'Prenota la prova gratuita';
   });
 });
 </script>
