@@ -9,7 +9,6 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="ASD Taranto Sport Team · La nostra pista, il tuo traguardo">
 <meta property="og:description" content="Allenati nel nuovo Stadio di atletica leggera di Taranto con tecnici FIDAL laureati in Scienze Motorie.">
-<meta property="og:image" content="https://asdtarantosportteam.vercel.app/assets/illustrazioni/og.jpg">
 <meta property="og:locale" content="it_IT">
 <link rel="icon" type="image/svg+xml" href="/assets/scudo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,25 +62,43 @@ nav.menu a{text-decoration:none;color:var(--ink-2)}
 nav.menu a:hover{color:var(--blue)}
 header.top .btn{padding:.6em 1.15em;font-size:.92rem}
 
-/* hero con foto dello stadio */
-.hero{position:relative;color:#fff;padding:0;overflow:hidden;background:var(--blue-deep)}
-.hero-bg{position:absolute;inset:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 50%}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,63,105,.35) 0%,rgba(18,63,105,.7) 55%,rgba(18,63,105,.92) 100%)}
-.hero-inner{position:relative;padding:72px 20px 64px;display:grid;gap:28px;align-items:center}
-.hero-logo{width:96px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.35))}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:.82rem;letter-spacing:.12em;color:var(--gold)}
-.kicker::before{content:"";width:28px;height:3px;background:var(--gold);border-radius:2px}
-.hero h1{font-size:clamp(2.8rem,10vw,6.4rem);margin-top:14px}
-.hero h1 .r{color:#fff}
-.hero h1 .g{color:var(--gold)}
-.hero p.lead{font-size:1.15rem;color:#e4eef8;max-width:44ch;margin:22px 0 30px}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px}
-.hero-stripes{position:relative;height:10px;display:flex}
-.hero-stripes i{flex:1}
+/* hero: minimal, tipografico, sfondo bianco */
+.hero{position:relative;background:#fff;overflow:hidden;padding:0}
+.hero-inner{position:relative;display:grid;gap:40px;align-items:center;padding:56px 20px 40px}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-stretch:125%;font-weight:700;text-transform:uppercase;font-size:.78rem;letter-spacing:.14em;color:var(--ink-2)}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--red);animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+.hero h1{font-size:clamp(2.7rem,8.6vw,5.4rem);margin-top:18px;line-height:1.04}
+.hero h1 .l1{display:block;color:var(--blue)}
+.hero h1 .l2{display:block;color:var(--red)}
+.hero h1 u{text-decoration:none;display:inline-block;position:relative}
+.hero h1 u::after{content:"";position:absolute;left:0;right:0;bottom:-.04em;height:.11em;background:var(--gold);border-radius:99px;transform-origin:left;animation:line 1.1s .5s cubic-bezier(.2,.8,.2,1) both}
+@keyframes line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.hero p.lead{font-size:clamp(1.08rem,2.2vw,1.3rem);color:var(--ink);max-width:36ch;margin-top:28px;line-height:1.45}
+.hero p.lead em{font-style:normal;color:var(--blue);font-weight:600}
+.who{display:grid;gap:12px;margin-top:32px;max-width:720px}
+.who a{display:flex;gap:16px;align-items:center;text-decoration:none;border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;background:#fff;transition:border-color .2s,transform .2s,box-shadow .2s}
+.who a:hover{border-color:var(--c);transform:translateY(-2px);box-shadow:0 14px 30px -18px rgba(18,63,105,.45)}
+.who .ic{flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--c);color:#fff}
+.who .ic svg{width:24px;height:24px}
+.who b{display:block;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:.95rem;color:var(--ink);letter-spacing:.02em}
+.who span{display:block;font-size:.93rem;color:var(--ink-2);line-height:1.35;margin-top:2px}
+.who .go{margin-left:auto;flex:none;font-size:1.3rem;color:var(--c);transition:transform .2s}
+.who a:hover .go{transform:translateX(4px)}
+.hero-mark{display:none;justify-self:center;position:relative;width:260px}
+.hero-mark img{width:100%;height:auto;position:relative;z-index:1}
+.hero-mark::before{content:"";position:absolute;width:150%;aspect-ratio:1;left:-25%;top:50%;transform:translateY(-46%);border-radius:50%;background:radial-gradient(circle,var(--tint) 0 58%,transparent 58.5%);z-index:0}
+/* corsie che "corrono" fino al traguardo */
+.lanes-run{position:relative;height:54px;margin-top:8px}
+.lanes-run i{position:absolute;left:0;height:12px;border-radius:0 99px 99px 0;transform-origin:left;animation:run 1.4s cubic-bezier(.2,.8,.2,1) both}
+.lanes-run i:nth-child(1){top:0;width:92%;background:var(--gold);animation-delay:.1s}
+.lanes-run i:nth-child(2){top:18px;width:84%;background:var(--red);animation-delay:.25s}
+.lanes-run i:nth-child(3){top:36px;width:97%;background:var(--blue);animation-delay:.4s}
+.lanes-run .finish{position:absolute;right:0;top:-6px;bottom:-6px;width:12px;background:repeating-linear-gradient(0deg,var(--ink) 0 6px,#fff 6px 12px);border:1.5px solid var(--ink);border-radius:2px}
+@keyframes run{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 
 /* strip */
-.strip{background:var(--blue);color:#fff}
+.strip{background:var(--blue);color:#fff;margin-top:40px}
 .strip .wrap{display:grid;grid-template-columns:repeat(2,1fr)}
 .strip .item{padding:22px 16px;border-left:1px solid rgba(255,255,255,.18)}
 .strip .item:nth-child(odd){border-left:0}
@@ -99,10 +116,15 @@ header.top .btn{padding:.6em 1.15em;font-size:.92rem}
 .feats li::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;margin-top:2px;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E2B48' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/13px no-repeat}
 .stadium-photos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .stadium-photos figure{position:relative;border-radius:16px;overflow:hidden;background:var(--tint)}
-.stadium-photos figure:first-child{grid-column:span 2;aspect-ratio:16/8}
+.stadium-photos figure:first-child{grid-column:span 2;aspect-ratio:16/9}
 .stadium-photos figure:not(:first-child){aspect-ratio:1}
 .stadium-photos img{width:100%;height:100%;object-fit:cover}
 .stadium-photos figcaption{position:absolute;left:10px;bottom:10px;background:rgba(18,63,105,.85);color:#fff;font-size:.75rem;font-weight:600;padding:4px 9px;border-radius:6px}
+
+/* riquadri foto in attesa delle immagini dell'ASD */
+.ph{position:relative;background:var(--tint)!important}
+.ph::before{content:"";position:absolute;inset:0;background:url(/assets/scudo.svg) center/56px no-repeat;opacity:.18;filter:grayscale(1)}
+.course-img.ph::after{display:none}
 
 /* chi siamo */
 .about{display:grid;gap:36px;align-items:center}
@@ -238,11 +260,12 @@ img.white{filter:brightness(0) invert(1)}
   .two{grid-template-columns:1fr 1fr}
   footer .grid{grid-template-columns:1.3fr 1fr 1fr}
   .wa-chat .bubble{display:block}
-  .hero-logo{width:120px}
 }
 @media (min-width:960px){
+  .who{grid-template-columns:1fr 1fr}
   nav.menu{display:flex}
-  .hero-inner{padding:110px 20px 96px}
+  .hero-inner{grid-template-columns:1.6fr .7fr;padding:72px 20px 40px}
+  .hero-mark{display:block}
   .stadium{grid-template-columns:.95fr 1.05fr;gap:56px}
   .about{grid-template-columns:1.1fr .9fr;gap:64px}
   .forces{grid-template-columns:repeat(3,1fr)}
@@ -273,22 +296,29 @@ img.white{filter:brightness(0) invert(1)}
 </header>
 
 <main>
-<!-- HERO: SLOGAN -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"><img src="/assets/illustrazioni/stadio-aereo.svg" alt="Illustrazione: vista dall'alto del nuovo stadio di atletica leggera di Taranto" fetchpriority="high"></div>
   <div class="wrap hero-inner">
-    <img class="hero-logo" src="/assets/scudo.svg" alt="Logo ASD Taranto Sport Team" width="120" height="166">
     <div>
-      <div class="kicker">ASD Taranto Sport Team · Atletica leggera</div>
-      <h1 class="display"><span class="r">La nostra pista,</span><br><span class="g">il tuo traguardo.</span></h1>
-      <p class="lead">Allenati nel nuovo Stadio di atletica leggera "Giuseppe Valente" di Taranto, appena ristrutturato, con tecnici FIDAL laureati in Scienze Motorie e atleti di livello nazionale.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#contatti">Scendi in pista</a>
-        <a class="btn btn-line" href="#stadio">Scopri lo stadio</a>
+      <div class="kicker"><i></i>Iscrizioni aperte · Atletica leggera a Taranto</div>
+      <h1 class="display"><span class="l1">La nostra pista,</span><span class="l2">il tuo <u>traguardo.</u></span></h1>
+      <p class="lead">Ogni grande arrivo comincia da un primo passo. <em>Il tuo, o quello di tuo figlio,</em> parte da qui: nel nuovo stadio di Taranto, con chi sa farti crescere.</p>
+      <div class="who">
+        <a href="#contatti" data-chi="L'atleta" style="--c:var(--blue)">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="4" r="2"/><path d="m6 21 3-6 3 2 1 5"/><path d="M10 12 8 9l4-2 3 3 3 1"/><path d="m12 7 1 5-2 3"/></svg></span>
+          <span><b>Voglio allenarmi</b><span>Obiettivi veri, un gruppo che spinge con te, tecnici che ti seguono.</span></span>
+          <span class="go">→</span>
+        </a>
+        <a href="#contatti" data-chi="Un genitore o tutore" style="--c:var(--red)">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="5" r="2.5"/><circle cx="17" cy="9" r="2"/><path d="M4 21v-6a4 4 0 0 1 8 0v6"/><path d="M14 21v-4a3 3 0 0 1 6 0v4"/></svg></span>
+          <span><b>Voglio iscrivere mio figlio</b><span>Tecnici laureati in Scienze Motorie, un ambiente sano, uno stadio nuovo.</span></span>
+          <span class="go">→</span>
+        </a>
       </div>
     </div>
+    <div class="hero-mark"><img src="/assets/scudo.svg" alt="Logo ASD Taranto Sport Team" width="260" height="360"></div>
   </div>
-  <div class="hero-stripes" aria-hidden="true"><i style="background:var(--gold)"></i><i style="background:var(--red)"></i><i style="background:var(--blue)"></i></div>
+  <div class="wrap"><div class="lanes-run" aria-hidden="true"><i></i><i></i><i></i><span class="finish"></span></div></div>
 </section>
 
 <div class="strip">
@@ -319,9 +349,9 @@ img.white{filter:brightness(0) invert(1)}
       </div>
     </div>
     <div class="stadium-photos">
-      <figure><img src="/assets/illustrazioni/stadio-aereo.svg" alt="Illustrazione: lo stadio con la pista blu visto dall'alto" loading="lazy"></figure>
-      <figure><img src="/assets/illustrazioni/pista-curva.svg" alt="Illustrazione: le corsie blu della pista in curva" loading="lazy"></figure>
-      <figure><img src="/assets/illustrazioni/partenza.svg" alt="Illustrazione: linea di partenza con blocchi e numeri di corsia" loading="lazy"></figure>
+      <figure class="ph"></figure>
+      <figure class="ph"></figure>
+      <figure class="ph"></figure>
     </div>
   </div>
 </section>
@@ -337,9 +367,7 @@ img.white{filter:brightness(0) invert(1)}
       <p>Accompagniamo bambini, ragazzi e adulti in un percorso di crescita sportiva, dal gioco-sport all'attività agonistica, con la stessa cura per tutti.</p>
       <div class="quote">Il nostro simbolo è il delfino di Taranto. La nostra casa è la pista.</div>
     </div>
-    <div class="about-photo">
-      <img src="/assets/illustrazioni/pista-curva.svg" alt="Illustrazione: la curva della pista blu dello stadio di Taranto" loading="lazy">
-    </div>
+    <div class="about-photo ph"></div>
   </div>
 </section>
 
@@ -353,7 +381,7 @@ img.white{filter:brightness(0) invert(1)}
     </div>
     <div class="courses">
       <article class="course" style="--c:var(--red)">
-        <div class="course-img"><img src="/assets/illustrazioni/partenza.svg" alt="Illustrazione: blocchi di partenza" loading="lazy"><span class="tag">01</span></div>
+        <div class="course-img ph"><span class="tag">01</span></div>
         <div class="course-body">
           <h3>Atletica<br>leggera</h3>
           <p>Corse, salti e lanci per tutte le età: dal settore giovanile all'attività agonistica.</p>
@@ -362,7 +390,7 @@ img.white{filter:brightness(0) invert(1)}
         </div>
       </article>
       <article class="course" style="--c:var(--blue)">
-        <div class="course-img"><img src="/assets/illustrazioni/pista-curva.svg" alt="Illustrazione: corsie della pista" loading="lazy" style="object-position:center 75%"><span class="tag">02</span></div>
+        <div class="course-img ph"><span class="tag">02</span></div>
         <div class="course-body">
           <h3>Preparazione<br>concorsi militari</h3>
           <p>Programmi mirati per superare le prove fisiche dei concorsi nelle Forze Armate e di Polizia.</p>
@@ -371,7 +399,7 @@ img.white{filter:brightness(0) invert(1)}
         </div>
       </article>
       <article class="course" style="--c:var(--gold);--tc:var(--ink)">
-        <div class="course-img"><img src="/assets/illustrazioni/stadio-aereo.svg" alt="Illustrazione: lo stadio dall'alto" loading="lazy"><span class="tag">03</span></div>
+        <div class="course-img ph"><span class="tag">03</span></div>
         <div class="course-body">
           <h3>Preparazione<br>atletica di base</h3>
           <p>Forza, resistenza, velocità e mobilità per stare bene o migliorare in qualsiasi sport.</p>
@@ -596,6 +624,10 @@ var SOCIAL = {
   });
 })();
 
+/* Preseleziona chi compila dai pulsanti dell'hero */
+document.querySelectorAll('[data-chi]').forEach(function(a){
+  a.addEventListener('click', function(){ document.getElementById('chi').value = a.dataset.chi; });
+});
 /* Preseleziona il corso dai pulsanti "Richiedi info" */
 document.querySelectorAll('[data-corso]').forEach(function(a){
   a.addEventListener('click', function(){ document.getElementById('corso').value = a.dataset.corso; });
