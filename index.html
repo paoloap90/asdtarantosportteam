@@ -60,6 +60,9 @@ a{color:inherit}
 /* riquadri foto (vuoti in attesa delle foto dell'ASD) */
 .ph{position:relative;overflow:hidden;background:var(--tint)}
 .ph::before{content:"";position:absolute;inset:0;background:url(/assets/scudo.svg) center/64px no-repeat;opacity:.16;filter:grayscale(1)}
+.ph.has-img::before{display:none}
+.hero-photo img.fill{border-radius:inherit}
+.ph img.fill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .ph.on-blue{background:rgba(255,255,255,.1)}
 .ph.on-blue::before{filter:brightness(0) invert(1);opacity:.22}
 
@@ -111,13 +114,13 @@ header.top .btn{padding:10px 20px;font-size:.95rem}
 .chip b{display:block;font-weight:700;font-size:.95rem;line-height:1.1}
 .chip small{color:#d6e5f4;font-size:.82rem}
 /* pannello foto hero */
-.hero-photo{position:relative;border-radius:var(--r);aspect-ratio:4/5;max-height:580px;width:100%;box-shadow:0 40px 80px -40px rgba(14,43,72,.8);border:1px solid rgba(255,255,255,.2)}
-.hero-photo .float{position:absolute;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.92);color:var(--ink);font-weight:700;font-size:.88rem;box-shadow:0 10px 24px -12px rgba(14,43,72,.6)}
+.hero-photo{position:relative;overflow:visible;border-radius:var(--r);aspect-ratio:4/5;max-height:580px;width:100%;box-shadow:0 40px 80px -40px rgba(14,43,72,.8);border:1px solid rgba(255,255,255,.2)}
+.hero-photo .float{z-index:1;position:absolute;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.92);color:var(--ink);font-weight:700;font-size:.88rem;box-shadow:0 10px 24px -12px rgba(14,43,72,.6)}
 .hero-photo .float i{width:9px;height:9px;border-radius:50%}
 .hero-photo .f1{left:-14px;top:18%}.hero-photo .f1 i{background:var(--red)}
 .hero-photo .f2{right:-10px;top:48%}.hero-photo .f2 i{background:var(--blue)}
 .hero-photo .f3{left:18px;bottom:22px}.hero-photo .f3 i{background:var(--gold)}
-.hero-photo .badge{position:absolute;right:-16px;top:-16px;width:96px;height:96px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;text-align:center;font-family:var(--disp);font-weight:700;text-transform:uppercase;line-height:.95;font-size:.95rem;transform:rotate(-8deg);box-shadow:0 14px 30px -12px rgba(14,43,72,.7)}
+.hero-photo .badge{z-index:1;position:absolute;right:-16px;top:-16px;width:96px;height:96px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;text-align:center;font-family:var(--disp);font-weight:700;text-transform:uppercase;line-height:.95;font-size:.95rem;transform:rotate(-8deg);box-shadow:0 14px 30px -12px rgba(14,43,72,.7)}
 .hero-photo .badge b{display:block;font-size:1.45rem}
 
 /* ---------- ticker ---------- */
@@ -373,7 +376,7 @@ footer details p{margin-top:8px}
         <div class="chip"><span class="n">03</span><span><b>Percorsi</b><small>Atletica e preparazione</small></span></div>
       </div>
     </div>
-    <div class="hero-photo ph on-blue" data-foto="hero">
+    <div class="hero-photo ph on-blue has-img" data-foto="hero"><img class="fill" src="/assets/foto/bambina-ostacoli.webp" alt="Bambina che salta gli ostacoli in pista con la maglia ASD Taranto Sport Team" loading="eager" style="object-position:center">
       <span class="float f1"><i></i>Atletica leggera</span>
       <span class="float f2"><i></i>Preparazione atletica per concorsi militari</span>
       <span class="float f3"><i></i>Preparazione atletica di base</span>
@@ -406,9 +409,9 @@ footer details p{margin-top:8px}
       <div class="cta-row" style="margin-top:30px"><a class="btn btn-blue" href="#contatti">Vieni ad allenarti qui <span class="ar">→</span></a></div>
     </div>
     <div class="st-photos rv">
-      <div class="ph" data-foto="stadio-1"></div>
-      <div class="ph" data-foto="stadio-2"></div>
-      <div class="ph" data-foto="stadio-3"><span class="label">Stadio G. Valente</span></div>
+      <div class="ph has-img" data-foto="stadio-1"><img class="fill" src="/assets/foto/staff-ragazzi.webp" alt="Un tecnico dello staff con i giovani atleti allo stadio" loading="lazy" style="object-position:35% center"></div>
+      <div class="ph has-img" data-foto="stadio-2"><img class="fill" src="/assets/foto/gruppo-corsa.webp" alt="Gruppo di atleti che corre sulla pista blu" loading="lazy" style="object-position:center"></div>
+      <div class="ph has-img" data-foto="stadio-3"><img class="fill" src="/assets/foto/partenza.webp" alt="Atleti ai blocchi di partenza" loading="lazy" style="object-position:center"><span class="label">Stadio G. Valente</span></div>
     </div>
   </div>
 </section>
@@ -423,7 +426,7 @@ footer details p{margin-top:8px}
     </div>
     <div class="courses">
       <article class="course rv" style="--c:var(--red)">
-        <div class="ph" data-foto="corso-atletica"><span class="num">01</span></div>
+        <div class="ph has-img" data-foto="corso-atletica"><img class="fill" src="/assets/foto/salto-alto.webp" alt="Atleta durante il salto in alto" loading="lazy" style="object-position:center 35%"><span class="num">01</span></div>
         <div class="body">
           <span class="tag">Tutte le età</span>
           <h3>Atletica leggera</h3>
@@ -433,7 +436,7 @@ footer details p{margin-top:8px}
         </div>
       </article>
       <article class="course rv" style="--c:var(--blue)">
-        <div class="ph" data-foto="corso-concorsi"><span class="num">02</span></div>
+        <div class="ph has-img" data-foto="corso-concorsi"><img class="fill" src="/assets/foto/partenza.webp" alt="Atleti in posizione di partenza" loading="lazy" style="object-position:center"><span class="num">02</span></div>
         <div class="body">
           <span class="tag">Giovani e adulti</span>
           <h3>Preparazione atletica per concorsi militari</h3>
@@ -443,7 +446,7 @@ footer details p{margin-top:8px}
         </div>
       </article>
       <article class="course rv" style="--c:var(--gold)">
-        <div class="ph" data-foto="corso-base"><span class="num" style="color:var(--ink)">03</span></div>
+        <div class="ph has-img" data-foto="corso-base"><img class="fill" src="/assets/foto/gruppo-corsa.webp" alt="Allenamento di corsa in gruppo" loading="lazy" style="object-position:center"><span class="num" style="color:var(--ink)">03</span></div>
         <div class="body">
           <span class="tag">Tutte le età</span>
           <h3>Preparazione atletica di base</h3>
@@ -467,11 +470,11 @@ footer details p{margin-top:8px}
       <div class="drag-hint"><b>Drag</b>Scorri le card</div>
     </div>
     <div class="cards" id="cards" style="margin-top:36px">
-      <article class="pcard" style="--c:var(--gold)"><div class="ph" data-foto="gruppo-bambini"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Esordienti</span></div><div class="bot"><h3>Bambini</h3><div class="age">5–11 anni · gioco-sport</div></div></article>
-      <article class="pcard" style="--c:var(--red)"><div class="ph" data-foto="gruppo-ragazzi"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Ragazzi · Cadetti</span></div><div class="bot"><h3>Ragazzi</h3><div class="age">12–15 anni · prime gare</div></div></article>
-      <article class="pcard" style="--c:var(--blue)"><div class="ph" data-foto="gruppo-giovani"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Allievi · Juniores</span></div><div class="bot"><h3>Giovani</h3><div class="age">16–19 anni · agonismo</div></div></article>
-      <article class="pcard" style="--c:var(--deep)"><div class="ph" data-foto="gruppo-adulti"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Senior · Master</span></div><div class="bot"><h3>Adulti</h3><div class="age">20+ anni · gara e benessere</div></div></article>
-      <article class="pcard" style="--c:var(--red)"><div class="ph" data-foto="gruppo-concorsi"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Concorsi militari</span></div><div class="bot"><h3>Preparazione atletica</h3><div class="age">Per le prove fisiche dei concorsi</div></div></article>
+      <article class="pcard" style="--c:var(--gold)"><div class="ph has-img" data-foto="gruppo-bambini"><img class="fill" src="/assets/foto/bambina-ostacoli.webp" alt="Bambina durante un esercizio con gli ostacoli" loading="lazy" style="object-position:center"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Esordienti</span></div><div class="bot"><h3>Bambini</h3><div class="age">5–11 anni · gioco-sport</div></div></article>
+      <article class="pcard" style="--c:var(--red)"><div class="ph has-img" data-foto="gruppo-ragazzi"><img class="fill" src="/assets/foto/staff-ragazzi.webp" alt="Ragazzi con la maglia della squadra" loading="lazy" style="object-position:80% center"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Ragazzi · Cadetti</span></div><div class="bot"><h3>Ragazzi</h3><div class="age">12–15 anni · prime gare</div></div></article>
+      <article class="pcard" style="--c:var(--blue)"><div class="ph has-img" data-foto="gruppo-giovani"><img class="fill" src="/assets/foto/salto-alto.webp" alt="Giovane atleta nel salto in alto" loading="lazy" style="object-position:center"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Allievi · Juniores</span></div><div class="bot"><h3>Giovani</h3><div class="age">16–19 anni · agonismo</div></div></article>
+      <article class="pcard" style="--c:var(--deep)"><div class="ph has-img" data-foto="gruppo-adulti"><img class="fill" src="/assets/foto/gruppo-corsa.webp" alt="Adulti che corrono in pista" loading="lazy" style="object-position:center"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Senior · Master</span></div><div class="bot"><h3>Adulti</h3><div class="age">20+ anni · gara e benessere</div></div></article>
+      <article class="pcard" style="--c:var(--red)"><div class="ph has-img" data-foto="gruppo-concorsi"><img class="fill" src="/assets/foto/partenza.webp" alt="Preparazione atletica: partenza dai blocchi" loading="lazy" style="object-position:center"></div><div class="top"><img src="/assets/scudo.svg" alt=""><span class="pill">Concorsi militari</span></div><div class="bot"><h3>Preparazione atletica</h3><div class="age">Per le prove fisiche dei concorsi</div></div></article>
     </div>
   </div>
 </section>
