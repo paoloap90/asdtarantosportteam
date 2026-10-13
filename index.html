@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASD Taranto Sport Team · Atletica leggera a Taranto</title>
+<meta name="description" content="Atletica leggera, preparazione atletica per concorsi militari e preparazione atletica di base a Taranto, allo Stadio Giuseppe Valente. Tecnici FIDAL laureati in Scienze Motorie. Iscrizioni aperte.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ASD Taranto Sport Team · Scendi in pista">
+<meta property="og:description" content="Atletica leggera a Taranto per bambini, ragazzi e adulti, allo Stadio Giuseppe Valente.">
+<meta property="og:locale" content="it_IT">
+<link rel="icon" type="image/svg+xml" href="/assets/scudo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,500;100,600;100,700;125,700;125,800;125,900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#B82D33; --blue:#1F70B7; --gold:#D6A53B; --wa:#1fa855;
+  --ink:#141414; --ink-2:#4B4B4B; --line:#E7E7E7; --paper:#FFFFFF; --soft:#F6F6F4;
+  --radius:14px; --max:1160px;
+  color-scheme: light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:"Archivo",system-ui,sans-serif;font-stretch:100%;color:var(--ink);background:var(--paper);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.display{font-stretch:125%;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:.95}
+.eyebrow{font-stretch:125%;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;font:inherit;font-weight:600;font-size:1rem;padding:.95em 1.5em;border-radius:999px;border:2px solid transparent;text-decoration:none;cursor:pointer;transition:transform .15s ease,background .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 8px 22px -10px rgba(184,45,51,.7)}
+.btn-primary:hover{background:#a2262c}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn svg{width:20px;height:20px;flex:none}
+section{padding:88px 0}
+.soft{background:var(--soft)}
+.sec-head{max-width:660px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(2rem,5.5vw,3.2rem);margin-top:12px}
+.sec-head p{color:var(--ink-2);margin-top:14px;font-size:1.06rem}
+
+/* header */
+header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:44px;width:auto}
+.brand span{font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:.86rem;line-height:1}
+.brand small{display:block;font-weight:500;font-size:.62rem;letter-spacing:.12em;color:var(--ink-2);margin-bottom:3px}
+nav.menu{display:none;gap:26px;font-size:.92rem;font-weight:600}
+nav.menu a{text-decoration:none;color:var(--ink-2)}
+nav.menu a:hover{color:var(--ink)}
+header.top .btn{padding:.6em 1.15em;font-size:.92rem}
+
+/* hero */
+.hero{position:relative;padding:52px 0 0;overflow:hidden}
+.hero-grid{display:grid;gap:32px;align-items:center}
+.slogan{display:inline-flex;align-items:center;gap:10px;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:.85rem;letter-spacing:.1em;color:var(--gold);margin-bottom:18px}
+.slogan::before{content:"";width:28px;height:3px;background:var(--gold);border-radius:2px}
+.hero h1{font-size:clamp(2.7rem,9vw,5.6rem)}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero h1 .b{color:var(--blue)}
+.hero p.lead{font-size:1.15rem;color:var(--ink-2);max-width:40ch;margin:22px 0 30px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.hero-mark{justify-self:center;width:min(210px,52vw)}
+.hero-mark img{width:100%;height:auto;filter:drop-shadow(0 24px 30px rgba(20,20,20,.12))}
+.lanes{display:block;width:100%;height:clamp(70px,12vw,170px);margin-top:40px}
+
+/* strip */
+.strip{background:var(--ink);color:#fff}
+.strip .wrap{display:grid;grid-template-columns:repeat(2,1fr)}
+.strip .item{padding:22px 16px;border-left:1px solid rgba(255,255,255,.12)}
+.strip .item:nth-child(odd){border-left:0}
+.strip .item:nth-child(n+3){border-top:1px solid rgba(255,255,255,.12)}
+.strip b{display:block;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:1.02rem;line-height:1.1;margin-bottom:4px}
+.strip span{font-size:.88rem;color:#c9c9c9}
+
+/* chi siamo */
+.about{display:grid;gap:36px;align-items:center}
+.about-text p{color:#333;font-size:1.08rem;margin-top:16px}
+.about-text p:first-of-type{margin-top:22px}
+.about-photo{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:var(--soft)}
+.about-photo img{width:100%;height:100%;object-fit:cover}
+.about-photo::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:linear-gradient(90deg,var(--gold) 0 33.3%,var(--red) 33.3% 66.6%,var(--blue) 66.6%)}
+.quote{margin-top:26px;padding:18px 20px;border-left:4px solid var(--red);background:var(--soft);border-radius:0 12px 12px 0;font-weight:600}
+
+/* corsi */
+.courses{display:grid;gap:18px}
+.course{background:#fff;border-radius:18px;border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+.course-img{aspect-ratio:16/10;background:var(--c);position:relative;overflow:hidden}
+.course-img img{width:100%;height:100%;object-fit:cover;mix-blend-mode:normal}
+.course-img .tag{position:absolute;left:16px;top:16px;background:var(--c);color:#fff;font-stretch:125%;font-weight:800;font-size:.8rem;padding:5px 10px;border-radius:6px;letter-spacing:.08em}
+.course-body{padding:26px 24px 28px;display:flex;flex-direction:column;flex:1}
+.course h3{font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:1.4rem;line-height:1.05}
+.course p{color:var(--ink-2);margin-top:10px}
+.course ul{list-style:none;margin:16px 0 22px;display:grid;gap:8px}
+.course li{padding-left:22px;position:relative;font-size:.97rem}
+.course li::before{content:"";position:absolute;left:0;top:.62em;width:12px;height:3px;border-radius:2px;background:var(--c)}
+.course a.more{margin-top:auto;font-weight:700;text-decoration:none;color:var(--c);display:inline-flex;gap:6px;align-items:center}
+.course a.more:hover{gap:10px}
+.ages{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.ages span{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:.9rem}
+.ages b{font-stretch:125%;font-weight:800;margin-right:6px}
+
+/* punti di forza */
+.forces{display:grid;gap:16px}
+.force{padding:26px 24px;border-radius:var(--radius);border:1px solid var(--line);background:#fff;position:relative;overflow:hidden}
+.force .ico{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 12%,#fff);color:var(--c)}
+.force .ico svg{width:26px;height:26px}
+.force h3{font-weight:700;font-size:1.12rem;line-height:1.25;margin-top:18px}
+.force p{color:var(--ink-2);font-size:.96rem;margin-top:6px}
+.force.big{background:var(--ink);color:#fff;border-color:var(--ink)}
+.force.big p{color:#cfcfcf}
+.force.big .ico{background:rgba(255,255,255,.1);color:var(--gold)}
+
+/* galleria */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.gallery figure{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1;background:var(--soft)}
+.gallery figure:first-child{grid-column:span 2;aspect-ratio:16/9}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gallery figure:hover img{transform:scale(1.04)}
+
+/* dove */
+.where{display:grid;gap:20px}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:320px;background:var(--soft)}
+.map iframe{display:block;width:100%;height:100%;min-height:320px;border:0}
+.place{background:var(--ink);color:#fff;border-radius:18px;padding:32px 28px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.place h3{font-size:clamp(1.6rem,4.2vw,2.2rem);margin:12px 0 14px}
+.place .eyebrow{color:var(--gold)}
+.place p{color:#d6d6d6}
+.place .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.place .btn-w{background:#fff;color:var(--ink)}
+.place .btn-o{border-color:rgba(255,255,255,.4);color:#fff}
+.place .btn-o:hover{background:#fff;color:var(--ink)}
+.place .contacts{margin-top:auto;padding-top:26px;display:grid;gap:8px;font-size:.95rem}
+.place .contacts a{text-decoration:none;color:#fff;display:inline-flex;gap:10px;align-items:center}
+.place .contacts svg{width:18px;height:18px;color:var(--gold)}
+
+/* form */
+.join{background:linear-gradient(180deg,var(--soft) 0,var(--soft) 30%,#fff 30%)}
+.join-card{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 60px -40px rgba(20,20,20,.35);display:grid;overflow:hidden}
+.join-side{background:var(--blue);color:#fff;padding:36px 28px;position:relative;overflow:hidden}
+.join-side h2{font-size:clamp(1.9rem,4.6vw,2.7rem)}
+.join-side h2 span{color:var(--gold)}
+.join-side p{margin-top:14px;color:#e3edf7}
+.join-side ol{margin-top:22px;list-style:none;display:grid;gap:12px;counter-reset:s}
+.join-side li{counter-increment:s;display:flex;gap:12px;align-items:flex-start;font-size:.97rem}
+.join-side li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:#fff;color:var(--blue);font-weight:800;display:grid;place-items:center;font-size:.85rem}
+.join-side .alt{margin-top:26px;font-size:.92rem;color:#e3edf7}
+.join-side .alt a{color:#fff;font-weight:700}
+.join-side img{position:absolute;right:-40px;bottom:-50px;width:190px;opacity:.14}
+form{padding:32px 28px;display:grid;gap:16px;align-content:start}
+.field{display:grid;gap:6px}
+.field label{font-weight:600;font-size:.92rem}
+.field label i{font-style:normal;color:var(--red)}
+.field input,.field select,.field textarea{font:inherit;font-size:1rem;padding:.85em 1em;border:1.5px solid #d4d4d4;border-radius:10px;background:#fff;color:var(--ink);width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(31,112,183,.15)}
+.two{display:grid;gap:16px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--ink-2)}
+.check input{margin-top:3px;width:18px;height:18px;accent-color:var(--blue);flex:none}
+.check a{color:var(--blue)}
+form .btn{width:100%;font-size:1.05rem}
+.hp{position:absolute;left:-9999px}
+.form-msg{display:none;border-radius:12px;padding:16px 18px;font-weight:600}
+.form-msg.ok{display:block;background:#e9f7ef;color:#16703a}
+.form-msg.err{display:block;background:#fdeceb;color:#9b2228}
+.form-done{display:none;padding:48px 32px;text-align:center;align-content:center}
+.form-done .tick{width:64px;height:64px;border-radius:50%;background:#e9f7ef;color:#1a8a46;display:grid;place-items:center;margin:0 auto 18px}
+.form-done h3{font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:1.6rem}
+.form-done p{color:var(--ink-2);margin-top:8px}
+
+/* faq */
+.faq{max-width:780px}
+details.q{border-bottom:1px solid var(--line);padding:20px 0}
+details.q summary{cursor:pointer;font-weight:700;font-size:1.08rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary::after{content:"+";font-weight:400;font-size:1.6rem;line-height:1;color:var(--red);transition:transform .2s}
+details.q[open] summary::after{transform:rotate(45deg)}
+details.q p{margin-top:10px;color:var(--ink-2)}
+
+/* footer */
+footer{background:var(--ink);color:#bdbdbd;padding:56px 0 110px;font-size:.92rem}
+footer .grid{display:grid;gap:28px}
+footer img{height:64px;width:auto;margin-bottom:14px}
+footer b{color:#fff;font-stretch:125%;text-transform:uppercase;font-weight:800;display:block;margin-bottom:6px}
+footer a{text-decoration:none;color:#fff}
+footer a:hover{color:var(--gold)}
+.social{display:flex;gap:10px;margin-top:12px}
+.social a{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);color:#fff}
+.social a:hover{background:var(--gold);color:var(--ink)}
+.social svg{width:20px;height:20px}
+footer .lanes-mini{height:6px;display:flex;margin:36px 0 18px;border-radius:3px;overflow:hidden}
+footer .lanes-mini i{flex:1}
+footer .legal{font-size:.8rem;color:#8c8c8c;display:flex;flex-wrap:wrap;gap:6px 18px}
+footer details{margin-top:14px;font-size:.82rem;color:#a6a6a6;max-width:780px}
+footer details summary{cursor:pointer;color:#d0d0d0}
+footer details p{margin-top:8px}
+img.white{filter:brightness(0) invert(1)}
+
+/* bottone chat WhatsApp */
+.wa-chat{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;align-items:center;gap:12px;text-decoration:none}
+.wa-chat .bubble{background:#fff;color:var(--ink);padding:10px 14px;border-radius:14px 14px 4px 14px;box-shadow:0 10px 30px -10px rgba(0,0,0,.35);font-size:.9rem;line-height:1.25;display:none}
+.wa-chat .bubble b{display:block;font-size:.95rem}
+.wa-chat .bubble small{color:var(--ink-2)}
+.wa-chat .icon{position:relative;width:62px;height:62px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 14px 28px -10px rgba(0,0,0,.5);transition:transform .2s}
+.wa-chat .icon::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--wa);animation:pulse 2.4s ease-out infinite;z-index:-1}
+.wa-chat .icon svg{width:32px;height:32px}
+.wa-chat .dot{position:absolute;top:2px;right:2px;width:14px;height:14px;border-radius:50%;background:var(--red);border:2px solid #fff}
+.wa-chat:hover .icon{transform:scale(1.07)}
+@keyframes pulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.6);opacity:0}}
+
+@media (min-width:720px){
+  .strip .wrap{grid-template-columns:repeat(4,1fr)}
+  .strip .item:nth-child(n+3){border-top:0}
+  .strip .item:nth-child(odd){border-left:1px solid rgba(255,255,255,.12)}
+  .strip .item:first-child{border-left:0}
+  .courses{grid-template-columns:repeat(3,1fr)}
+  .forces{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(4,1fr)}
+  .gallery figure:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+  .two{grid-template-columns:1fr 1fr}
+  footer .grid{grid-template-columns:1.3fr 1fr 1fr}
+  .wa-chat .bubble{display:block}
+}
+@media (min-width:960px){
+  nav.menu{display:flex}
+  .hero{padding-top:72px}
+  .hero-grid{grid-template-columns:1.25fr .75fr}
+  .hero-mark{width:340px}
+  .about{grid-template-columns:1.1fr .9fr;gap:64px}
+  .forces{grid-template-columns:repeat(3,1fr)}
+  .where{grid-template-columns:1.25fr .75fr}
+  .join-card{grid-template-columns:.85fr 1.15fr}
+  .join-side{padding:48px 40px}
+  form{padding:44px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <img src="/assets/scudo.svg" alt="" width="32" height="44">
+      <span><small>ASD</small>Taranto Sport Team</span>
+    </a>
+    <nav class="menu" aria-label="Menu principale">
+      <a href="#chi-siamo">Chi siamo</a>
+      <a href="#corsi">Corsi</a>
+      <a href="#perche">Perché noi</a>
+      <a href="#dove">Dove siamo</a>
+    </nav>
+    <a class="btn btn-primary" href="#contatti">Iscriviti</a>
+  </div>
+</header>
+
+<main>
+<!-- TITOLO E SLOGAN -->
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="slogan">Dal primo passo al podio</div>
+      <h1 class="display">Corri con<br><em>Taranto.</em><br><span class="b">Cresci</span> in pista.</h1>
+      <p class="lead">Atletica leggera per bambini, ragazzi e adulti, preparazione atletica per concorsi militari e di base. Allo Stadio Giuseppe Valente, con tecnici FIDAL laureati in Scienze Motorie.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contatti">Scendi in pista</a>
+        <a class="btn btn-ghost" href="#corsi">Scopri i corsi</a>
+      </div>
+    </div>
+    <div class="hero-mark"><img src="/assets/scudo.svg" alt="Logo ASD Taranto Sport Team: scudo TST con delfino" width="462" height="640"></div>
+  </div>
+  <svg class="lanes" viewBox="0 0 1440 170" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 18 C420 128 600 150 720 152 C840 150 1020 128 1440 18" fill="none" stroke="#D6A53B" stroke-width="16"/>
+    <path d="M0 50 C420 140 600 158 720 158 C840 158 1020 140 1440 50" fill="none" stroke="#B82D33" stroke-width="18"/>
+    <path d="M0 86 C420 152 600 164 720 164 C840 164 1020 152 1440 86" fill="none" stroke="#1F70B7" stroke-width="20"/>
+    <path d="M0 122 C420 162 600 168 720 168 C840 168 1020 162 1440 122" fill="none" stroke="#1F70B7" stroke-width="14"/>
+    <rect x="0" y="166" width="1440" height="4" fill="#1F70B7"/>
+  </svg>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="item"><b>Tecnici FIDAL</b><span>Tesserati e qualificati</span></div>
+    <div class="item"><b>Scienze Motorie</b><span>Formazione universitaria</span></div>
+    <div class="item"><b>Livello nazionale</b><span>Atleti professionisti in squadra</span></div>
+    <div class="item"><b>Stadio G. Valente</b><span>Ci alleniamo su pista vera</span></div>
+  </div>
+</div>
+
+<!-- PRESENTAZIONE -->
+<section id="chi-siamo">
+  <div class="wrap about">
+    <div class="about-text">
+      <div class="eyebrow">Chi siamo</div>
+      <h2 class="display" style="font-size:clamp(2rem,5.5vw,3.2rem);margin-top:12px">Una nuova squadra<br>per Taranto</h2>
+      <p><strong>ASD Taranto Sport Team</strong> è un'associazione sportiva dilettantistica di atletica leggera nata a Taranto nel 2026. Ci alleniamo allo Stadio di atletica leggera "Giuseppe Valente".</p>
+      <p>Il nostro staff unisce tecnici tesserati FIDAL laureati in Scienze Motorie e atleti professionisti di livello nazionale: competenza scientifica ed esperienza vissuta in pista, al servizio di chi inizia e di chi vuole competere.</p>
+      <p>Accompagniamo bambini, ragazzi e adulti in un percorso di crescita sportiva, dal gioco-sport all'attività agonistica, con la stessa cura per tutti.</p>
+      <div class="quote">Il nostro simbolo è il delfino di Taranto. La nostra casa è la pista.</div>
+    </div>
+    <div class="about-photo">
+      <img src="https://images.unsplash.com/photo-1728060560980-e39712526b7a?auto=format&fit=crop&w=900&q=70" alt="Atleti che corrono su una pista di atletica" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- CORSI -->
+<section id="corsi" class="soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">I nostri corsi</div>
+      <h2 class="display">Trova il tuo<br>percorso</h2>
+      <p>Tre percorsi, un unico metodo: allenamenti programmati e seguiti da professionisti.</p>
+    </div>
+    <div class="courses">
+      <article class="course" style="--c:var(--red)">
+        <div class="course-img"><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=70" alt="Atleta su pista di atletica" loading="lazy"><span class="tag">01</span></div>
+        <div class="course-body">
+          <h3>Atletica<br>leggera</h3>
+          <p>Corse, salti e lanci per tutte le età: dal settore giovanile all'attività agonistica.</p>
+          <ul><li>Gioco-sport e avviamento per i più piccoli</li><li>Specialità e gare per ragazzi e giovani</li><li>Agonismo e amatori per gli adulti</li></ul>
+          <a class="more" href="#contatti" data-corso="Atletica leggera">Richiedi info →</a>
+        </div>
+      </article>
+      <article class="course" style="--c:var(--blue)">
+        <div class="course-img"><img src="https://images.unsplash.com/photo-1535571638417-bc38e1002ccc?auto=format&fit=crop&w=800&q=70" alt="Atleta durante un allenamento di corsa" loading="lazy"><span class="tag">02</span></div>
+        <div class="course-body">
+          <h3>Preparazione<br>concorsi militari</h3>
+          <p>Programmi mirati per superare le prove fisiche dei concorsi nelle Forze Armate e di Polizia.</p>
+          <ul><li>Allenamento sulle prove previste dal bando</li><li>Test di valutazione e simulazioni</li><li>Programma costruito sulla data della prova</li></ul>
+          <a class="more" href="#contatti" data-corso="Preparazione concorsi militari">Richiedi info →</a>
+        </div>
+      </article>
+      <article class="course" style="--c:var(--gold)">
+        <div class="course-img"><img src="https://images.unsplash.com/photo-1666361760966-846c7765bb77?auto=format&fit=crop&w=800&q=70" alt="Corsie di una pista di atletica" loading="lazy"><span class="tag">03</span></div>
+        <div class="course-body">
+          <h3>Preparazione<br>atletica di base</h3>
+          <p>Forza, resistenza, velocità e mobilità per stare bene o migliorare in qualsiasi sport.</p>
+          <ul><li>Per tutti i livelli di partenza</li><li>Ideale come base per altri sport</li><li>Gruppi seguiti da tecnici qualificati</li></ul>
+          <a class="more" href="#contatti" data-corso="Preparazione atletica di base">Richiedi info →</a>
+        </div>
+      </article>
+    </div>
+    <div class="ages" aria-label="Fasce d'età">
+      <span><b>5–11</b>Bambini</span>
+      <span><b>12–15</b>Ragazzi</span>
+      <span><b>16–19</b>Giovani</span>
+      <span><b>20+</b>Adulti e Master</span>
+    </div>
+  </div>
+</section>
+
+<!-- PUNTI DI FORZA -->
+<section id="perche">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Perché sceglierci</div>
+      <h2 class="display">I nostri<br>punti di forza</h2>
+    </div>
+    <div class="forces">
+      <div class="force big" style="--c:var(--gold)">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+        <h3>Tecnici FIDAL laureati in Scienze Motorie</h3>
+        <p>Allenatori tesserati con la Federazione Italiana di Atletica Leggera e formazione universitaria su allenamento e crescita.</p>
+      </div>
+      <div class="force" style="--c:var(--red)">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></svg></div>
+        <h3>Atleti di livello nazionale</h3>
+        <p>Nello staff atleti professionisti che portano in pista esperienza di gara vera.</p>
+      </div>
+      <div class="force" style="--c:var(--blue)">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 20v-5"/><path d="M11 20V10"/><path d="M16 20V6"/><path d="m4 11 6-5 4 3 6-5"/></svg></div>
+        <h3>Crescita sportiva</h3>
+        <p>Un percorso graduale per ogni età: si parte dalle basi e si cresce con obiettivi chiari.</p>
+      </div>
+      <div class="force" style="--c:var(--red)">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3"/><path d="M7 5H4v2a3 3 0 0 0 3 3"/></svg></div>
+        <h3>Attività agonistica</h3>
+        <p>Per chi vuole gareggiare: programmazione per specialità e partecipazione alle gare.</p>
+      </div>
+      <div class="force" style="--c:var(--gold)">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.3-9C1.2 8.6 3.2 5 6.6 5c2 0 3.4 1.1 4.1 2.3h2.6C14 6.1 15.4 5 17.4 5c3.4 0 5.4 3.6 3.9 7-2.3 4.6-9.3 9-9.3 9Z"/><path d="M8 12h2l1.5-2.5 2 5L15 12h1.5"/></svg></div>
+        <h3>Centro medico partner</h3>
+        <p>Collaborazione con un centro di riabilitazione e fisioterapia per prevenzione e recupero.</p>
+      </div>
+      <div class="force" style="--c:var(--blue)">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.3-6-11a6 6 0 0 1 12 0c0 5.7-6 11-6 11Z"/><circle cx="12" cy="10" r="2.2"/></svg></div>
+        <h3>Una vera pista</h3>
+        <p>Allenamenti allo Stadio di atletica leggera "Giuseppe Valente" di Taranto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOTO -->
+<section id="foto" class="soft" style="padding-top:72px;padding-bottom:72px">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:28px">
+      <div class="eyebrow">In pista</div>
+      <h2 class="display">Energia,<br>fatica, sorrisi</h2>
+    </div>
+    <div class="gallery">
+      <figure><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=70" alt="Atleta in pista" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1728060560980-e39712526b7a?auto=format&fit=crop&w=600&q=70" alt="Gruppo di atleti in corsa" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1535571638417-bc38e1002ccc?auto=format&fit=crop&w=600&q=70" alt="Atleta durante la corsa" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1538146888063-3ecf5e002d7c?auto=format&fit=crop&w=600&q=70" alt="Atleti che corrono" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1666361760966-846c7765bb77?auto=format&fit=crop&w=600&q=70" alt="Corsie della pista" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- DOVE SIAMO -->
+<section id="dove">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Dove ci alleniamo</div>
+      <h2 class="display">Ci vediamo<br>in pista</h2>
+    </div>
+    <div class="where">
+      <div class="map">
+        <iframe title="Mappa Stadio di atletica leggera Giuseppe Valente, Taranto" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Stadio%20di%20atletica%20leggera%20Giuseppe%20Valente%2C%20Via%20Lago%20di%20Montepulciano%201%2C%2074121%20Taranto&z=15&output=embed"></iframe>
+      </div>
+      <div class="place">
+        <div class="eyebrow">Impianto sportivo</div>
+        <h3 class="display">Stadio di atletica leggera "Giuseppe Valente"</h3>
+        <p>Via Lago di Montepulciano 1<br>74121 Taranto (TA)</p>
+        <div class="actions">
+          <a class="btn btn-w" href="https://www.google.com/maps/dir/?api=1&destination=Stadio%20di%20atletica%20leggera%20Giuseppe%20Valente%2C%20Via%20Lago%20di%20Montepulciano%201%2C%2074121%20Taranto" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 19-9-9 19-2-8-8-2Z"/></svg>
+            Avvia navigatore
+          </a>
+          <a class="btn btn-o" href="https://maps.apple.com/?q=Stadio%20Giuseppe%20Valente&address=Via%20Lago%20di%20Montepulciano%201%2C%2074121%20Taranto" target="_blank" rel="noopener">Apple Mappe</a>
+        </div>
+        <div class="contacts">
+          <a href="tel:+393347381249"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>+39 334 738 1249</a>
+          <a href="mailto:asdtarantosportteam@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>asdtarantosportteam@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION + MODULO -->
+<section id="contatti" class="join">
+  <div class="wrap">
+    <div class="join-card">
+      <div class="join-side">
+        <div class="eyebrow" style="color:var(--gold)">Iscrizioni aperte</div>
+        <h2 class="display" style="margin-top:12px">Richiedi maggiori informazioni e <span>scendi in pista</span></h2>
+        <p>Compila il modulo: ti ricontattiamo con orari, quote e tutto quello che serve per iniziare.</p>
+        <ol>
+          <li>Ci lasci i tuoi dati</li>
+          <li>Ti contattiamo per conoscerci</li>
+          <li>Vieni allo stadio e inizi ad allenarti</li>
+        </ol>
+        <p class="alt">Preferisci scriverci subito? <a href="https://wa.me/393347381249" target="_blank" rel="noopener">WhatsApp</a> o <a href="mailto:asdtarantosportteam@gmail.com">email</a>.</p>
+        <img src="/assets/scudo.svg" class="white" alt="" width="190" height="263">
+      </div>
+
+      <form id="lead" name="contatti" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/grazie.html">
+        <input type="hidden" name="form-name" value="contatti">
+        <p class="hp"><label>Non compilare: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="two">
+          <div class="field"><label for="nome">Nome <i>*</i></label><input id="nome" name="nome" autocomplete="given-name" required></div>
+          <div class="field"><label for="cognome">Cognome <i>*</i></label><input id="cognome" name="cognome" autocomplete="family-name" required></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="email">Email <i>*</i></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="telefono">Telefono <i>*</i></label><input id="telefono" name="telefono" type="tel" autocomplete="tel" required></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="corso">Corso di interesse <i>*</i></label>
+            <select id="corso" name="corso" required>
+              <option value="">Seleziona…</option>
+              <option>Atletica leggera</option>
+              <option>Preparazione concorsi militari</option>
+              <option>Preparazione atletica di base</option>
+              <option>Non so ancora, consigliatemi</option>
+            </select></div>
+          <div class="field"><label for="eta">Età dell'atleta <i>*</i></label><input id="eta" name="eta_atleta" type="number" min="4" max="99" inputmode="numeric" required></div>
+        </div>
+        <div class="field"><label for="chi">Chi compila il modulo</label>
+          <select id="chi" name="compilato_da"><option>L'atleta</option><option>Un genitore o tutore</option></select></div>
+        <div class="field"><label for="msg">Messaggio</label><textarea id="msg" name="messaggio" rows="3" placeholder="Esperienze precedenti, giorni preferiti, domande…"></textarea></div>
+        <label class="check"><input type="checkbox" name="privacy" value="accettata" required><span>Ho letto l'<a href="#privacy" onclick="document.getElementById('privacy').open=true">informativa privacy</a> e acconsento al trattamento dei dati per essere ricontattato. Se l'atleta è minorenne, il modulo va compilato da un genitore o tutore. <i style="color:var(--red);font-style:normal">*</i></span></label>
+        <div class="form-msg" id="form-msg" role="status"></div>
+        <button class="btn btn-primary" type="submit" id="submit">Richiedi informazioni</button>
+      </form>
+
+      <div class="form-done" id="form-done">
+        <div class="tick"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Richiesta inviata!</h3>
+        <p>Grazie, ti ricontatteremo al più presto.<br>Ci vediamo in pista.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Domande frequenti</div>
+      <h2 class="display">Prima di<br>iniziare</h2>
+    </div>
+    <div class="faq">
+      <details class="q"><summary>Serve esperienza nell'atletica?</summary><p>No. I gruppi sono divisi per età e livello: si parte dalle basi e si cresce con il proprio ritmo.</p></details>
+      <details class="q"><summary>Serve il certificato medico?</summary><p>Sì. Per l'attività agonistica serve il certificato medico agonistico, per quella non agonistica il certificato non agonistico. Ti spieghiamo noi come procedere al momento dell'iscrizione.</p></details>
+      <details class="q"><summary>Per quali concorsi preparate?</summary><p>Prepariamo alle prove fisiche dei concorsi nelle Forze Armate e di Polizia. Indicaci il concorso nel modulo e costruiamo il programma sulle prove del bando.</p></details>
+      <details class="q"><summary>Quanto costa l'iscrizione?</summary><p>Le quote dipendono dal corso e dalla fascia d'età. Compila il modulo o scrivici e ti mandiamo tutti i dettagli.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <img src="/assets/scudo.svg" class="white" alt="ASD Taranto Sport Team" width="46" height="64">
+        <b>ASD Taranto Sport Team</b>
+        Associazione Sportiva Dilettantistica di atletica leggera.<br>Fondata a Taranto nel 2026.
+        <div class="social" id="social"></div>
+      </div>
+      <div>
+        <b>Contatti</b>
+        <a href="tel:+393347381249">+39 334 738 1249</a><br>
+        <a href="mailto:asdtarantosportteam@gmail.com">asdtarantosportteam@gmail.com</a><br>
+        <a href="https://wa.me/393347381249" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+      </div>
+      <div>
+        <b>Sedi</b>
+        Operativa: Stadio di atletica leggera "G. Valente", Via Lago di Montepulciano 1, Taranto<br>
+        Legale: Via Val d'Aosta 20, 74121 Taranto
+      </div>
+    </div>
+    <div class="lanes-mini"><i style="background:var(--gold)"></i><i style="background:var(--red)"></i><i style="background:var(--blue)"></i></div>
+    <div class="legal"><span>© 2026 ASD Taranto Sport Team</span><span>C.F. 90293820735</span></div>
+    <details id="privacy">
+      <summary>Informativa privacy</summary>
+      <p>Titolare del trattamento è ASD Taranto Sport Team, Via Val d'Aosta 20, 74121 Taranto, C.F. 90293820735 (asdtarantosportteam@gmail.com). I dati inviati tramite il modulo di contatto sono usati solo per rispondere alla richiesta di informazioni e per l'eventuale iscrizione, non sono ceduti a terzi e sono conservati per il tempo necessario a gestire la richiesta. Puoi chiedere in ogni momento accesso, rettifica o cancellazione dei tuoi dati scrivendo all'indirizzo email indicato.</p>
+    </details>
+  </div>
+</footer>
+
+<!-- BOTTONE CHAT WHATSAPP FISSO -->
+<a class="wa-chat" href="https://wa.me/393347381249?text=Ciao!%20Vorrei%20informazioni%20sui%20corsi%20di%20ASD%20Taranto%20Sport%20Team." target="_blank" rel="noopener" aria-label="Apri la chat WhatsApp con ASD Taranto Sport Team">
+  <span class="bubble"><b>Hai domande?</b><small>Scrivici su WhatsApp</small></span>
+  <span class="icon">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3Z"/></svg>
+    <span class="dot"></span>
+  </span>
+</a>
+
+<script>
+/* Link social: incolla qui gli indirizzi quando disponibili */
+var SOCIAL = {
+  facebook: "https://www.facebook.com/share/1EvXsf645V/",
+  instagram: ""
+};
+(function(){
+  var icons = {
+    facebook: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3c-3 0-4 2-4 4.3V8H8v3.5h2V22h4V11.5h2.7L17 8h-3Z"/></svg>',
+    instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>'
+  };
+  var box = document.getElementById('social');
+  Object.keys(SOCIAL).forEach(function(k){
+    if(!SOCIAL[k]) return;
+    var a = document.createElement('a');
+    a.href = SOCIAL[k]; a.target = '_blank'; a.rel = 'noopener';
+    a.setAttribute('aria-label', k === 'facebook' ? 'Facebook' : 'Instagram');
+    a.innerHTML = icons[k]; box.appendChild(a);
+  });
+})();
+
+/* Preseleziona il corso dai pulsanti "Richiedi info" */
+document.querySelectorAll('[data-corso]').forEach(function(a){
+  a.addEventListener('click', function(){ document.getElementById('corso').value = a.dataset.corso; });
+});
+
+/* Invio modulo (Netlify Forms) senza cambiare pagina */
+document.getElementById('lead').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = this, msg = document.getElementById('form-msg'), btn = document.getElementById('submit');
+  msg.className = 'form-msg'; msg.textContent = '';
+  if(!f.checkValidity()){ f.reportValidity(); return; }
+  btn.disabled = true; btn.textContent = 'Invio in corso…';
+  fetch('/', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: new URLSearchParams(new FormData(f)).toString()
+  }).then(function(r){
+    if(!r.ok) throw new Error(r.status);
+    f.style.display = 'none';
+    document.getElementById('form-done').style.display = 'grid';
+  }).catch(function(){
+    msg.className = 'form-msg err';
+    msg.innerHTML = 'Invio non riuscito. Riprova oppure scrivici su <a href="https://wa.me/393347381249" target="_blank" rel="noopener">WhatsApp</a> o a <a href="mailto:asdtarantosportteam@gmail.com">asdtarantosportteam@gmail.com</a>.';
+    btn.disabled = false; btn.textContent = 'Richiedi informazioni';
+  });
+});
+</script>
+</body>
+</html>
