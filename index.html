@@ -461,8 +461,7 @@ img.white{filter:brightness(0) invert(1)}
         <img src="/assets/scudo.svg" class="white" alt="" width="190" height="263">
       </div>
 
-      <form id="lead" name="contatti" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/grazie.html">
-        <input type="hidden" name="form-name" value="contatti">
+      <form id="lead" name="contatti" novalidate>
         <p class="hp"><label>Non compilare: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <div class="two">
           <div class="field"><label for="nome">Nome <i>*</i></label><input id="nome" name="nome" autocomplete="given-name" required></div>
@@ -582,21 +581,54 @@ document.querySelectorAll('[data-corso]').forEach(function(a){
   a.addEventListener('click', function(){ document.getElementById('corso').value = a.dataset.corso; });
 });
 
-/* Invio modulo (Netlify Forms) senza cambiare pagina */
+/* Invio modulo con Web3Forms (le richieste arrivano a asdtarantosportteam@gmail.com).
+   Incolla qui la chiave ricevuta da web3forms.com. Finché è vuota, il modulo apre WhatsApp con i dati già compilati. */
+var WEB3FORMS_KEY = "";
+
 document.getElementById('lead').addEventListener('submit', function(e){
   e.preventDefault();
   var f = this, msg = document.getElementById('form-msg'), btn = document.getElementById('submit');
   msg.className = 'form-msg'; msg.textContent = '';
   if(!f.checkValidity()){ f.reportValidity(); return; }
+  if(f.elements['bot-field'].value) return;
+  var d = new FormData(f);
+  var done = function(){ f.style.display = 'none'; document.getElementById('form-done').style.display = 'grid'; };
+
+  if(!WEB3FORMS_KEY){
+    var t = 'Ciao ASD Taranto Sport Team! Vorrei maggiori informazioni.\n\n'
+      + 'Nome: ' + d.get('nome') + ' ' + d.get('cognome') + '\n'
+      + 'Email: ' + d.get('email') + '\n'
+      + 'Telefono: ' + d.get('telefono') + '\n'
+      + 'Corso: ' + d.get('corso') + '\n'
+      + 'Età atleta: ' + d.get('eta_atleta') + '\n'
+      + 'Compilato da: ' + d.get('compilato_da')
+      + (d.get('messaggio') ? '\nMessaggio: ' + d.get('messaggio') : '');
+    window.open('https://wa.me/393347381249?text=' + encodeURIComponent(t), '_blank', 'noopener');
+    done(); return;
+  }
+
   btn.disabled = true; btn.textContent = 'Invio in corso…';
-  fetch('/', {
+  var payload = {
+    access_key: WEB3FORMS_KEY,
+    subject: 'Nuova richiesta dal sito: ' + d.get('corso'),
+    from_name: 'Sito ASD Taranto Sport Team',
+    replyto: d.get('email'),
+    Nome: d.get('nome') + ' ' + d.get('cognome'),
+    Email: d.get('email'),
+    Telefono: d.get('telefono'),
+    Corso: d.get('corso'),
+    'Età atleta': d.get('eta_atleta'),
+    'Compilato da': d.get('compilato_da'),
+    Messaggio: d.get('messaggio') || '-',
+    Privacy: 'Consenso accettato'
+  };
+  fetch('https://api.web3forms.com/submit', {
     method: 'POST',
-    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-    body: new URLSearchParams(new FormData(f)).toString()
-  }).then(function(r){
-    if(!r.ok) throw new Error(r.status);
-    f.style.display = 'none';
-    document.getElementById('form-done').style.display = 'grid';
+    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+    body: JSON.stringify(payload)
+  }).then(function(r){ return r.json(); }).then(function(j){
+    if(!j.success) throw new Error(j.message);
+    done();
   }).catch(function(){
     msg.className = 'form-msg err';
     msg.innerHTML = 'Invio non riuscito. Riprova oppure scrivici su <a href="https://wa.me/393347381249" target="_blank" rel="noopener">WhatsApp</a> o a <a href="mailto:asdtarantosportteam@gmail.com">asdtarantosportteam@gmail.com</a>.';
