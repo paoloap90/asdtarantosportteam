@@ -365,6 +365,8 @@ a.pcard{text-decoration:none;display:block}
 /* ---------- staff: laurea in evidenza ---------- */
 .coach .degree{display:inline-flex;align-items:center;gap:7px;background:var(--blue);color:#fff;font-weight:700;font-size:.82rem;padding:6px 12px;border-radius:999px;margin-bottom:12px}
 .coach .degree::before{content:"🎓";font-size:.9rem}
+.coach .degree.role2::before{content:"⏱"}
+.coach[hidden]{display:none!important}
 
 
 /* ================= MOBILE FIRST ================= */
@@ -691,9 +693,9 @@ a.pcard{text-decoration:none;display:block}
         <div class="ph has-img" data-foto="istruttore-2"><img class="fill" src="/assets/foto/luca-semeraro.webp" alt="Luca Semeraro durante la rincorsa del salto con l'asta" loading="lazy" style="object-position:center 25%"><span class="role"><i></i>Allenatore</span></div>
         <div class="body"><span class="degree">Laureato in Scienze Motorie</span><h3>Luca Semeraro</h3><p>Astista e multiplista, campione regionale di decathlon: porta in pista l'esperienza delle gare.</p><div class="quals"><span>Tesserato FIDAL</span><span>Salto con l'asta</span><span>Prove multiple</span></div></div>
       </article>
-      <article class="coach rv" hidden style="--c:var(--gold)">
-        <div class="ph" data-foto="istruttore-3"><span class="role"><i></i>Allenatore</span></div>
-        <div class="body"><h3>Nome Cognome</h3><p>Specialità dell'atletica leggera e attività agonistica.</p><div class="quals"><span>Allenatore FIDAL 2° livello</span></div></div>
+      <article class="coach rv" style="--c:var(--gold)">
+        <div class="ph has-img" data-foto="istruttore-3"><img class="fill" src="/assets/foto/danilo-diana.webp" alt="Danilo Diana in un palazzetto di atletica indoor" loading="lazy" style="object-position:center 25%"><span class="role"><i></i>Allenatore</span></div>
+        <div class="body"><span class="degree role2">Allenatore specialista e preparatore fisico</span><h3>Danilo Diana</h3><p>Veterano del salto con l'asta e del decathlon, ha insegnato in un liceo sportivo e nel corso di laurea magistrale in Scienze e Tecniche dello Sport.</p><div class="quals"><span>Salto con l'asta</span><span>Prove multiple</span><span>Docente universitario</span></div></div>
       </article>
       <article class="coach rv" hidden style="--c:var(--deep)">
         <div class="ph" data-foto="istruttore-4"><span class="role"><i></i>Atleta</span></div>
